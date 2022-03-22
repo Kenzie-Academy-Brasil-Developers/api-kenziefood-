@@ -13,4 +13,15 @@ const botaoRemoverModal = document.querySelector(".modal__cadastroButton");
 botaoRemoverModal.addEventListener("click", Modal.modalCadastro);
 
 
+const botaoFiltro = document.querySelector('.button__filtroTodos')
+botaoFiltro.addEventListener('click', Modal.filtroTodos)
+
+const botaoPanificadora = document.querySelector('.button__filtroPanificadora')
+botaoPanificadora.addEventListener('click', Modal.filtroPanificadora)
+
+const botaoFrutas = document.querySelector('.button__filtroFrutas')
+botaoFrutas.addEventListener('click',Modal.filtroFrutas)
+
+const botaoBebidas = document.querySelector('.button__filtroBebidas')
+botaoBebidas.addEventListener('click',Modal.filtroBebidas)
 

@@ -12,6 +12,8 @@
 .main__registro{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .main__registro__botoes{
     display: flex;
@@ -133,4 +135,11 @@ button:hover{
     overflow-x: auto;
     overflow-y: hidden;
     width: 320px;
+}
+.button__filtro{
+    width: 120px;
+    height: 48px;
+    background-color: #FFF7F4;
+    border: 0;
+    border-radius: 32px;
 }
