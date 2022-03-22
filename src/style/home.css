@@ -134,3 +134,10 @@ button:hover{
     overflow-y: hidden;
     width: 320px;
 }
+.button__filtro{
+    width: 120px;
+    height: 48px;
+    background-color: #FFF7F4;
+    border: 0;
+    border-radius: 32px;
+}
