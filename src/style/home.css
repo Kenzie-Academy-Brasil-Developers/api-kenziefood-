@@ -63,3 +63,10 @@ button:hover{
     margin-left: 194px;
 
 }
+.button__filtro{
+    width: 120px;
+    height: 48px;
+    background-color: #FFF7F4;
+    border: 0;
+    border-radius: 32px;
+}
