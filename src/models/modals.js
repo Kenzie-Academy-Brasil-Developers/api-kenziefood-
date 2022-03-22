@@ -56,4 +56,9 @@ export class Modal {
 
 
     
+    static modalCarrinho() {
+        const modalCarrinho = document.querySelector(".section__carrinhoModal");
+        modalCarrinho.classList.toggle('hidden');
+    }
+
 }

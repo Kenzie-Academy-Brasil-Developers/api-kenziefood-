@@ -11,9 +11,10 @@
 }
 .main__registro{
     display: flex;
-    justify-content: center;
+    height: 69vh;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-end;
 }
 .main__registro__botoes{
     display: flex;
@@ -39,7 +40,6 @@ button:hover{
     height: 100vh;
     position: fixed;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,4 +142,145 @@ button:hover{
     background-color: #FFF7F4;
     border: 0;
     border-radius: 32px;
+}    
+/*--------------------------- CARRINHO ----------------------------*/
+
+.section__carrinho{
+    height: 5vh;
+}
+.section__carrinhoAbrir{
+    background-color: #FF2253;
+    width: 100vw;
+    height: 6vh;
+    border: none;
+    border: 0px 10px 0px 10px;
+    border: 0 10px 0 10px;
+    border-radius: 0px 0px 6px 6px;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 17.1px;
+}
+.section__carrinhoModalDiv{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6f6d6dad;
+}
+.section__carrinhoDiv{
+    width: 90vw;
+    border: 1px solid;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 9px;
+    border: none;
+}
+.section__carrinhoFechar{
+    background-color: #FF2253;
+    color: #F8F9FA;
+    width: inherit;
+    height: 7vh;
+    border-radius: 9px 9px 0px 0px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    align-items: center;
+    padding-right: 17px;
+    padding-left: 40px;
+    font-weight: 500;
+}
+.section__carrinhoUl{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70vh;
+    overflow: auto;
+}
+.section__carrinhoLi{
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 10vh;
+
+}
+.section__carrinhoDivImg{
+
+}
+.section__carrinhoDivNomes{
+    width: 55vw;
+}
+.section__carrinhoDivExcluir{
+    
+}
+.section__carrinhoLiImg{
+    width: 21vw;
+    height: 10vh;
+    border-radius: 15%;
+    padding-right: 5px;
+}
+.section__carrinhoLiNome{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    padding-bottom: 5px;
+}
+.section__carrinhoLiCategoria{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    color: #868E96;
+
+}
+.section__carrinhoLiPreco{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    padding-top: 10px;
+}
+.section__carrinhoQuantidade{
+    height: 4vh;
+    padding-top: 6px;
+    background-color: #F8F9FA;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    display: flex;
+    width: 89vw;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.section__carrinhoTotal{
+    height: 5vh;
+    background-color: #F8F9FA;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    display: flex;
+    width: 89vw;
+    border-radius: 0px 0px 9px 9px;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.section__carrinhoExcluir{
+    height: 4vh;
+    border: none;
+}
+.section__carrinhoSpanTotal{
+    padding-right: 15px;
+}
+.section__carrinhoSpanTotalNome{
+    padding-left: 15px;
+}
+.section__carrinhoSpanQuantidadeNome{
+    padding-left: 15px;
+}
+.section__carrinhoSpanQuantidade{
+    padding-right: 15px;
 }
