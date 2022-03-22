@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KenzieFood</title> 
+
+  <link rel="stylesheet" href="./src/style/reset.css">
+  <link rel="stylesheet" href="./src/style/home.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header class="cabecalho__login">
+    <section class="main__registro__botoes">
+      <button id="cadastro">Criar Conta</button>
+    </section>
+  </header>
+  
+  <main class="main__registro">
+      <section class="main__vitrine__produtos">
+        <ul class="main__produtos">
+          
+        </ul>
+      </section>
+  </main>
+
+  <section class="modal__cadastro hidden">
+    <div class="modal__cadastroDiv">
+      <button class="modal__cadastroButton">X</button>
+      <form class="modal__cadastroForm" action="" name="cadastro">
+        <label>Nome</label>
+        <input type="text" name="name" placeholder="Nome">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Email">
+        <label>Senha</label>
+        <input type="password" name="password" placeholder="Senha">
+        <button>Enviar</button>
+      </form>
+   </div>
+  </section>
+  
+  <script type="module" src="./src/script.js"></script>
+  <script type ="module" src="./src/models/vitrine.js"></script>
+</body>
+</html>

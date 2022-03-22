@@ -1,0 +1,136 @@
+.cabecalho__login{
+    display: flex;
+    height: 30vh;
+    align-items: center;
+    justify-content: center;
+}
+.cabecalho__login img{
+    width: 75vw;
+    padding-top: 10px;
+    height: 20vh;
+}
+.main__registro{
+    display: flex;
+    justify-content: center;
+}
+.main__registro__botoes{
+    display: flex;
+    flex-direction: column;
+    height: 13vh;
+    width: 40vw;
+    justify-content: space-around;
+    color: #212529;
+}
+.main__registro__botoes button{
+    color: #212529;
+    background-color: #F8F9FA;
+    border: none;
+    height: 5vh;
+    border-radius: 15px;
+}
+button:hover{
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+.modal__cadastro{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal__cadastroDiv{
+    width: 220px;
+    height: 225px;
+    border: 1px solid;
+    background-color: #FFF;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hidden{
+    display: none;
+}
+.modal__cadastroForm{
+    display: flex;
+    flex-direction: column;
+}
+.modal__cadastroButton{
+    margin-left: 194px;
+}
+
+.btn__carrinho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E4F7EF;
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+}
+
+.icone__carrinho{
+    width: 15px;
+}
+
+.card__produto{
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 397px;
+    margin-right: 15px;
+    margin-left: 5px;
+}
+
+.div__preco--produto{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+
+.nome__produto{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 27px;
+}
+
+.descricao__produto, .categoria__produto{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #868E96;
+}
+
+.imagem__produto{
+    border: 3px solid #FFE9EE;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.preco__produto{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #212529;
+}
+
+.main__produtos{
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 320px;
+}
