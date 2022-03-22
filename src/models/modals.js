@@ -1,5 +1,7 @@
 import { Api } from "./Api.js";
 import { Usuario } from "./cadastro.js";
+import { Vitrine } from "./vitrine.js";
+const ulVitrine = document.querySelector('.main__vitrine__produtos ul')
 
 export class Modal {
 
@@ -18,16 +20,14 @@ export class Modal {
             
         })
         console.log(arrayFiltro)
-        
+        Vitrine.montarVitrinePorudos(arrayFiltro, ulVitrine)
         
 
     }
 
     static async filtroTodos(){
-        const arrayProdutos = await Api.pegarProdutosPublico()
-        arrayProdutos.forEach(produto =>{
-            console.log(arrayProdutos)
-        })
+        const produtosVitrine = await Api.pegarProdutosPublico()
+        Vitrine.montarVitrinePorudos(produtosVitrine, ulVitrine)
     }
 
     static filtroPanificadora(event){
