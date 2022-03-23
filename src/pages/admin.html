@@ -37,7 +37,7 @@
     </ul>
   </main>
 
-  <section class="sectionModal sectionModal__cadastroProduto hidden">
+  <section class="sectionModal sectionModal__cadastroProduto">
     <nav class="modal__cadastroProduto modal__admin">
       <header>
         <p>Cadastro</p>
@@ -68,7 +68,7 @@
     </nav>
   </section>
 
-  <section class="sectionModal sectionModal__alterarProduto hidden">
+  <section class="sectionModal sectionModal__alterarProduto">
     <nav class="modal__alterarProduto modal__admin">
       <header>
         <p>Alterar Produto</p>
@@ -98,10 +98,11 @@
             <button class="modal__formBotaoExcluir" type="reset">Excluir</button>
             <button class="modal__formBotaoSalvar" type="submit">Salvar alteração</button>
           </div>
+        </form>
     </nav>
   </section>
 
-  <section class="sectionModal sectionModa__excluirProduto">
+  <section class="sectionModal sectionModal__excluirProduto">
     <nav class="modal__excluirProduto modal__admin">
       <header>
         <p>Exclusão de produto</p>
@@ -109,7 +110,7 @@
       </header>
       <form class="modal__formulario modal__formExcluir" id="form__excluirProduto">
         <p>Tem certeza que deseja excluir este produto?</p>
-        <input id="modal__inputExcluirProduto" type="text" value="" hidden>
+        <input id="modal__inputExcluirProduto" type="text" value="${produto.id}" hidden>
 
         <div>
           <button type="submit">Sim</button>
