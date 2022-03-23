@@ -1,41 +1,82 @@
-.cabecalho__login{
+.registro__pesquisa{
+
     display: flex;
-    height: 30vh;
+    
+    width: 320px;
+    height: 140px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px -18px rgb(0 0 0 / 25%);
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+
 }
-.cabecalho__login img{
-    width: 75vw;
-    padding-top: 10px;
-    height: 20vh;
-}
-.main__registro{
+
+#container__um{
+
+    width: 355px;
+    height: 148px;
     display: flex;
     height: 69vh;
-    flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    flex-direction: column-reverse;
+    align-items: center;
+
 }
-.main__registro__botoes{
+
+.img__logo{
+
+    position: absolute;
+    height: 60px;
+    left: 15px;
+    top: 5px;
+
+}
+
+.pesquisa__produtos{
+
     display: flex;
-    flex-direction: column;
-    height: 13vh;
-    width: 40vw;
-    justify-content: space-around;
-    color: #212529;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 18px 15px 40px;
+    position: absolute;
+    height: 45px;
+    top: 75px;
+    background: url(../svg/SearchIcon.svg) no-repeat center left 5px #E9ECEF;
+    border: 1.5px solid #E9ECEF;
+    box-sizing: border-box;
+    border-radius: 12px;
+    width: 280px;
+    margin: 0px 5px 5px 105px;
+
 }
-.main__registro__botoes button{
-    color: #212529;
-    background-color: #F8F9FA;
+
+#container__dois{
+
+    width: 150px;
+    height: 150px;
+
+}
+
+#btn__cadastro{
+
+    width: 40px;
+    height: 40px;
+    top: 35px;
+    border-radius: 128.571px;
+    background: url(../svg/userIcon.svg) no-repeat center;
+    cursor: pointer;
     border: none;
-    height: 5vh;
-    border-radius: 15px;
+    transform: translateY(-50%);
+    padding: 0;
+    position: relative;
+    left: 35px;
+
 }
-button:hover{
-    background-color: #FF2253;
-    color: #F8F9FA;
-}
+
 .modal__cadastro{
+
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -43,25 +84,37 @@ button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
+
 .modal__cadastroDiv{
+
     width: 220px;
     height: 225px;
     border: 1px solid;
-    background-color: #FFF;
+    background-color: #FFFFFF;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
+
 .hidden{
+
     display: none;
+
 }
+
 .modal__cadastroForm{
+
     display: flex;
     flex-direction: column;
+
 }
+
 .modal__cadastroButton{
+
     margin-left: 194px;
 }
 
@@ -141,13 +194,28 @@ button:hover{
     overflow-y: hidden;
     width: 320px;
 }
+
+.nav__botoes{
+    display: inline-block;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 383px;}
+
 .button__filtro{
-    width: 120px;
+    width: 115px;
     height: 48px;
     background-color: #FFF7F4;
     border: 0;
-    border-radius: 32px;
+    border-radius: 21px;
+    margin-right: 8px;
 }    
+
+.button__filtro:hover{
+    cursor: pointer;
+    background-color: #FF2253;
+    color: white;
+}
 /*--------------------------- CARRINHO ----------------------------*/
 
 .section__carrinho{
@@ -288,4 +356,175 @@ button:hover{
 }
 .section__carrinhoSpanQuantidade{
     padding-right: 15px;
+}
+
+@media (min-width: 375px){
+
+    .registro__pesquisa{
+
+        width: 375px;  
+
+    }
+
+    .pesquisa__produtos{
+
+        width: 315px;
+        margin: 0px 5px 5px 115px;  
+
+    }
+
+    #btn__cadastro{
+
+        left: 40px;
+
+    }
+
+}
+
+@media (min-width: 425px){
+
+    .registro__pesquisa{
+
+        width: 425px;  
+
+    }
+
+    .pesquisa__produtos{
+
+        width: 365px;
+        margin: 0px 5px 5px 130px;  
+
+    }
+
+    #btn__cadastro{
+
+        left: 55px;
+
+    }
+
+}
+
+@media (min-width: 768px){
+
+    .registro__pesquisa{
+
+        width: 768px;
+        height: 72px;
+        left: 0px;
+        top: 0px;
+        flex-direction: row-reverse;
+        justify-content: flex-start
+
+    }
+
+    #container__um{
+
+        width: 50px;
+        height: 150px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    
+    }
+
+    #container__dois{
+
+        width: 5px;
+        height: 45px;
+    
+    }
+
+    .img__logo{
+
+        position: absolute;
+        height: 60px;
+        left: 22px;
+        top: 5px;
+    
+    } 
+
+    .pesquisa__produtos{
+
+        position: absolute;
+        width: 312px;
+        height: 40px;
+        left: 400px;
+        top: 15px;
+        margin: 0px;
+    
+    }
+
+    #btn__cadastro{
+
+        top: 18px;
+        left: 3px;
+    
+    }
+
+}
+
+@media (min-width: 1024px){
+
+    .registro__pesquisa{
+
+        width: 1024px;  
+
+    }
+
+    .pesquisa__produtos{
+
+        left: 650px;
+
+    }
+
+}
+
+@media (min-width: 1440px){
+
+    .registro__pesquisa{
+
+        width: 1440px;  
+        
+    }
+
+    .pesquisa__produtos{
+
+        left: 1070px;
+
+    }
+
+}
+
+@media (min-width: 1600px){
+
+    .registro__pesquisa{
+
+        width: 1600px;  
+        
+    }
+
+    .pesquisa__produtos{
+
+        left: 1230px;
+
+    }
+
+
+}
+
+@media (min-width: 2560px){
+
+    .registro__pesquisa{
+
+        width: 2560px;  
+        
+    }
+
+    .pesquisa__produtos{
+
+        left: 2180px;
+
+    }
+
+
 }
