@@ -192,6 +192,51 @@ main {
   font-family: 'Poppins', sans-serif;
 }
 
+/* MODALS DE STATUS */
+
+.section__status {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+
+  ;
+}
+
+.section__status > header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  height: 20px;
+
+  background-color: rgba(233, 236, 239, 1);
+  border-radius: 12px 12px 0px 0px;
+}
+
+.section__status > header > button {
+  height: fit-content;
+
+  padding: 4px 8px;
+  border: 1px solid rgb(194, 197, 199);
+  background-color: rgb(233, 236, 239, 1);
+  border-radius: 6px;
+}
+
+.section__status > p {
+  line-height: 24px;
+  font-size: 14px;
+  text-align: center;
+
+  border-radius: 0px 0px 4px 4px;
+}
+
+.section__statusConfirmado > p {
+  border-bottom: 4px solid green;
+}
+.section__statusRecusado > p {
+  border-bottom: 4px solid rgb(219, 19, 19);
+}
+
+
 /* DISPLAY DOS MODAIS */
 .sectionModal__cadastroProduto {
   display: none;
@@ -202,5 +247,13 @@ main {
 }
 
 .sectionModal__excluirProduto {
+  display: none;
+}
+
+.section__statusRecusado {
+  display: none;
+}
+
+.section__statusConfirmado {
   display: none;
 }
