@@ -81,8 +81,7 @@ main {
 }
 
 .modal__formulario > label {
-  /* margin-top: 10px; */
-  margin-bottom: -15px;
+  margin-bottom: 0;
   font-size: 10px;
 }
 
@@ -140,15 +139,23 @@ main {
 .modal__excluirProduto {
   margin-top: 100px;
   height: 20vh;
+  margin-top: 20vh;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   
   background-color:rgba(248, 249, 250, 1);
 
   border-radius: 5px;
 }
 
+.modal__excluirProduto > header {
+  padding: 15px;
+}
 
 .modal__excluirProduto > form > p {
-  font-size: 6px;
+  font-size: 12px;
 }
 
 .modal__excluirProduto > form > div {
@@ -158,7 +165,37 @@ main {
   align-items: center;
 }
 
-.hidden {
+.modal__excluirProduto > form > div > button {
+  color: rgba(134, 142, 150, 1);
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 24px;
+
+  padding: 5px 30px;
+  border: 1px solid rgba(233, 236, 239, 1);
+  background-color: rgb(233, 236, 239, 1);
+  border-radius: 12px;
+}
+
+.modal__excluirProduto > form > div > h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+
+  padding: 5px 30px;
+  border: 1px solid rgba(233, 236, 239, 1);
+  background-color: rgb(233, 236, 239, 1);
+  border-radius: 12px;
+}
+
+.modal__excluirProduto > form > div > h3 > a {
+  text-decoration: none;
+  color: rgba(134, 142, 150, 1);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* DISPLAY DOS MODAIS */
+.sectionModal__cadastroProduto {
   display: none;
 }
 
@@ -208,3 +245,10 @@ main {
   color: white;
   border-radius: 32px;
 } 
+.sectionModal__alterarProduto {
+  display: none;
+}
+
+.sectionModal__excluirProduto {
+  display: none;
+}
