@@ -191,7 +191,7 @@
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
-    width: 320px;
+    width: 100%;
 }
 
 .nav__botoes{
@@ -199,7 +199,7 @@
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    width: 320px;}
+    width: 100%;}
 
 .button__filtro{
     width: 115px;
