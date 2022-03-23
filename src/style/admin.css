@@ -141,7 +141,6 @@ main {
   margin-top: 100px;
   height: 20vh;
   
-  
   background-color:rgba(248, 249, 250, 1);
 
   border-radius: 5px;
@@ -162,3 +161,50 @@ main {
 .hidden {
   display: none;
 }
+
+.nav__botoes{
+  display: inline-block;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;}
+
+.button__filtro{
+  width: 115px;
+  height: 48px;
+  background-color: #FFF7F4;
+  border: 0;
+  border-radius: 21px;
+  margin-right: 8px;
+}    
+
+.button__filtro:hover{
+  cursor: pointer;
+  background-color: #FF2253;
+  color: white;
+  border-radius: 32px;
+} 
+
+.button__cadastrarNovoProduto{
+  background-color: #FF2253;
+  border: 0;
+  border-radius: 21px;
+  width: 170px;
+  height: 35px;
+  color: white;
+  
+  align-self: center;
+}
+
+.section__botoesFiltro{
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0px;
+
+}
+
+.button__filtro:hover{
+  cursor: pointer;
+  color: white;
+  border-radius: 32px;
+} 

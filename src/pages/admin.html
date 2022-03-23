@@ -19,9 +19,18 @@
   </header>
 
   <main>
-    <section> 
-      Aqui terá os botoes de: 
-        Todos, Panificadora, Frutas, Bebidas e Adicionar novo produto
+    <section class="section__botoesFiltro">
+      <nav class="nav__botoes">
+        
+        <button class="button__filtro button__filtroTodos">Todos</button>
+        <button class="button__filtro button__filtroPanificadora">&#129366; Panificadora</button>
+        <button class="button__filtro button__filtroFrutas">&#129373; Frutas</button>
+        <Button class="button__filtro button__filtroBebidas">&#127863; Bebidas</Button>
+      
+        
+      </nav> 
+      <button class="button__cadastrarNovoProduto">Adicionar novo produto</button>
+      
     </section>
 
     <ul class="vitrine__produtosAdmin">
@@ -41,7 +50,7 @@
     <nav class="modal__cadastroProduto modal__admin">
       <header>
         <p>Cadastro</p>
-        <button>X</button>
+        <button class="section__fecharmodal">X</button>
       </header>
         <form class="modal__formulario modal__formCadastro" id="form__cadastroProduto">
           <label>Nome do Produto</label>
@@ -101,7 +110,7 @@
     </nav>
   </section>
 
-  <section class="sectionModal sectionModa__excluirProduto">
+  <section class="sectionModal sectionModa__excluirProduto hidden ">
     <nav class="modal__excluirProduto modal__admin">
       <header>
         <p>Exclusão de produto</p>

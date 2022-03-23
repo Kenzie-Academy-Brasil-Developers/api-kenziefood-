@@ -60,4 +60,6 @@ export class Modal {
         modalCarrinho.classList.toggle('hidden');
     }
 
+    
+
 }
