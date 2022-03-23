@@ -1,0 +1,164 @@
+/* Corpo da pagina */
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  height: 50px;
+}
+
+main {
+  margin: 0% 5% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.vitrine__headerProdutos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vitrine__headerProdutos > li {
+  color: rgba(134, 142, 150, 1);
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* MODAIS*/
+
+.sectionModal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.modal__admin {
+  margin-top: 100px;
+  height: 50vh;
+  background-color:rgba(248, 249, 250, 1);
+
+  border-radius: 5px;
+}
+
+.modal__admin > header {
+  background-color: rgba(233, 236, 239, 1);
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+  ;
+  padding: 5px 15px;
+
+  border-radius: 5px 5px 0px 0px;
+}
+
+.modal__admin > header > button {
+  height: fit-content;
+  background-color: rgb(211, 209, 209);
+  border: 1px solid rgb(173, 173, 173);
+  border-radius: 5px;
+}
+
+.modal__formulario {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 15px;
+}
+
+.modal__formulario > label {
+  /* margin-top: 10px; */
+  margin-bottom: -15px;
+  font-size: 10px;
+}
+
+.modal__formulario > input {
+  background-color: rgba(233, 236, 239, 1);
+  border: 1px solid rgb(163, 164, 165);
+  padding: 5px 2px;
+  border-radius: 6px;
+
+  color: rgba(134, 142, 150, 1);
+}
+
+.modal__formulario > select {
+  background-color: rgba(233, 236, 239, 1);
+  border: 1px solid rgb(163, 164, 165);
+  padding: 5px 2px;
+  border-radius: 5px;
+
+  color: rgba(134, 142, 150, 1);
+}
+
+
+.modal__formulario > input[name="descricao"] {
+  padding: 15px 5px;
+}
+
+.modal__formulario > button {
+  background-color: rgba(255, 34, 83, 1);
+  color: white;
+
+  padding: 10px;
+  border: 1px solid rgba(255, 34, 83, 1);
+  border-radius: 20px;
+
+}
+
+.modal__formBotaoExcluir {
+  background-color: rgba(233, 236, 239, 1);
+  color: rgba(134, 142, 150, 1);
+
+  padding: 10px;
+  border: 1px solid rgb(163, 164, 165);
+  border-radius: 20px;
+}
+
+.modal__formBotaoSalvar {
+  background-color: rgba(255, 34, 83, 1);
+  color: white;
+
+  padding: 10px;
+  border: 1px solid rgba(255, 34, 83, 1);
+  border-radius: 20px;
+}
+
+.modal__excluirProduto {
+  margin-top: 100px;
+  height: 20vh;
+  
+  
+  background-color:rgba(248, 249, 250, 1);
+
+  border-radius: 5px;
+}
+
+
+.modal__excluirProduto > form > p {
+  font-size: 6px;
+}
+
+.modal__excluirProduto > form > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
