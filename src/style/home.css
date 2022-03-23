@@ -1,8 +1,7 @@
 .registro__pesquisa{
 
     display: flex;
-    position: absolute;
-    width: 320px;
+    max-width: 2560px;
     height: 140px;
     background: #FFFFFF;
     box-shadow: 0px 0px 40px -18px rgb(0 0 0 / 25%);
@@ -119,12 +118,6 @@
 
 @media (min-width: 375px){
 
-    .registro__pesquisa{
-
-        width: 375px;  
-
-    }
-
     .pesquisa__produtos{
 
         width: 315px;
@@ -141,12 +134,6 @@
 }
 
 @media (min-width: 425px){
-
-    .registro__pesquisa{
-
-        width: 425px;  
-
-    }
 
     .pesquisa__produtos{
 
@@ -167,7 +154,6 @@
 
     .registro__pesquisa{
 
-        width: 768px;
         height: 72px;
         left: 0px;
         top: 0px;
@@ -224,12 +210,6 @@
 
 @media (min-width: 1024px){
 
-    .registro__pesquisa{
-
-        width: 1024px;  
-
-    }
-
     .pesquisa__produtos{
 
         left: 650px;
@@ -239,12 +219,6 @@
 }
 
 @media (min-width: 1440px){
-
-    .registro__pesquisa{
-
-        width: 1440px;  
-        
-    }
 
     .pesquisa__produtos{
 
@@ -256,12 +230,6 @@
 
 @media (min-width: 1600px){
 
-    .registro__pesquisa{
-
-        width: 1600px;  
-        
-    }
-
     .pesquisa__produtos{
 
         left: 1230px;
@@ -272,12 +240,6 @@
 }
 
 @media (min-width: 2560px){
-
-    .registro__pesquisa{
-
-        width: 2560px;  
-        
-    }
 
     .pesquisa__produtos{
 
