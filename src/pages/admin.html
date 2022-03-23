@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Admin</title>
+
+  <link rel="stylesheet" href="../style/reset.css">
+  <link rel="stylesheet" href="../style/admin.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <header>
+    Aqui entra o mesmo header do Home Page
+  </header>
+
+  <main>
+    <section> 
+      Aqui terá os botoes de: 
+        Todos, Panificadora, Frutas, Bebidas e Adicionar novo produto
+    </section>
+
+    <ul class="vitrine__produtosAdmin">
+      <ul class="vitrine__headerProdutos">
+        <li>Produto</li>
+        <li>Categoria</li>
+        <li>Descrição</li>
+        <li>Ações</li>
+      </ul>
+      <!-- Aqui será colocada a lista de itens
+       podendo ser -->
+
+    </ul>
+  </main>
+
+  <section class="sectionModal sectionModal__cadastroProduto hidden">
+    <nav class="modal__cadastroProduto modal__admin">
+      <header>
+        <p>Cadastro</p>
+        <button>X</button>
+      </header>
+        <form class="modal__formulario modal__formCadastro" id="form__cadastroProduto">
+          <label>Nome do Produto</label>
+          <input type="text" name="nome" placeholder="Digitar o nome">
+          <label>Descrição</label>
+          <input type="text" name="descricao" placeholder="Digitar a descrição">
+
+          <label>Categoria</label>
+          <!-- A ser feito quanto descobrir como realizar igual o figma -->
+          <select name="categoria" id="select__cadastroProduto">
+            <option disabled selected hidden value="">Escolher categoria</option>
+            <option value="Panificadora">Panificadora</option>
+            <option value="Frutas">Frutas</option>
+            <option value="Bebidas">Bebidas</option>
+          </select>
+
+          <label>Valor do Produto</label>
+          <input type="number" name="preco" placeholder="Digitar o valor aqui">
+          <label>Link da imagem</label>
+          <input type="url" name="imagem" placeholder="Inserir link">
+
+          <button>Cadastrar</button>
+        </form>
+    </nav>
+  </section>
+
+  <section class="sectionModal sectionModal__alterarProduto hidden">
+    <nav class="modal__alterarProduto modal__admin">
+      <header>
+        <p>Alterar Produto</p>
+        <button>X</button>
+      </header>
+        <form class="modal__formulario modal__formEditar" id="form__editarProduto">
+          <label>Nome do Produto</label>
+          <input type="text" name="nome" placeholder="Digitar o nome">
+          <label>Descrição</label>
+          <input type="text" name="descricao" placeholder="Digitar a descrição">
+
+          <label>Categoria</label>
+          <!-- A ser feito quanto descobrir como realizar igual o figma -->
+          <select name="categoria" id="select__cadastroProduto">
+            <option disabled selected hidden value="">Escolher categoria</option>
+            <option value="Panificadora">Panificadora</option>
+            <option value="Frutas">Frutas</option>
+            <option value="Bebidas">Bebidas</option>
+          </select>
+
+          <label>Valor do Produto</label>
+          <input type="number" name="preco" placeholder="Digitar o valor aqui">
+          <label>Link da imagem</label>
+          <input type="url" name="imagem" placeholder="Inserir link">
+
+          <div>
+            <button class="modal__formBotaoExcluir" type="reset">Excluir</button>
+            <button class="modal__formBotaoSalvar" type="submit">Salvar alteração</button>
+          </div>
+    </nav>
+  </section>
+
+  <section class="sectionModal sectionModa__excluirProduto">
+    <nav class="modal__excluirProduto modal__admin">
+      <header>
+        <p>Exclusão de produto</p>
+        <button>X</button>
+      </header>
+      <form class="modal__formulario modal__formExcluir" id="form__excluirProduto">
+        <p>Tem certeza que deseja excluir este produto?</p>
+        <input id="modal__inputExcluirProduto" type="text" value="" hidden>
+
+        <div>
+          <button type="submit">Sim</button>
+          <h3><a href="./admin.html">Não</a></h3>
+        </div>
+
+      </form>
+    </nav>
+  </section>
+  
+  <script type="module" src="../admin.js"></script>
+</body>
+</html>
