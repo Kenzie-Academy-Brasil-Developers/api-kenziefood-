@@ -16,5 +16,4 @@ const botaoAdicionarProduto = document.querySelector('.button__cadastrarNovoProd
 botaoAdicionarProduto.addEventListener('click',ModalADM.adicionarProdutoModal)
 
 const botaoFecharCadastro = document.querySelector('.section__fecharmodal')
-
 botaoFecharCadastro.addEventListener('click',ModalADM.adicionarProdutoModal)
