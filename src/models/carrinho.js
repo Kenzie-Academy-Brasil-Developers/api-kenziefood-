@@ -1,22 +1,19 @@
+import { Api } from "./Api.js";
+
+const produtosVitrine = await Api.pegarProdutosPublico()
+const ul = document.querySelector(".section__carrinhoUl")
+const spanTotal = document.querySelector(".section__carrinhoSpanTotal")
+const spanQuantidade = document.querySelector(".section__carrinhoSpanQuantidade")
 
 export class Carrinho {
+    static carrinhoProdutos = []
 
-    static async testeProdutos() {
-        const response = await fetch("https://kenzie-food-api.herokuapp.com/products");
-        const data = await response.json();
-        return data
-    }
-    
-    static async templateCarrinho() {
-
-        const data = await Carrinho.testeProdutos();
-        const ul = document.querySelector(".section__carrinhoUl");
-        let count = 1;
-
-        data.forEach(produtos => {
-            
-            const li = document.createElement("li");
-            li.className = "section__carrinhoLi";
+    static templateCarrinho(listaDoCarrinho) {
+        ul.innerHTML = ""
+        
+        listaDoCarrinho.forEach(produtos => {
+            const li = document.createElement("li")
+            li.className = "section__carrinhoLi"
 
             li.innerHTML = `
             <div class="section__carrinhoDivImg">
@@ -26,32 +23,50 @@ export class Carrinho {
             <div class="section__carrinhoDivNomes">
             <p class="section__carrinhoLiNome">${produtos.nome}</p>
             <p class="section__carrinhoLiCategoria">${produtos.categoria}</p>
-            <p class="section__carrinhoLiPreco">R$${produtos.preco.toFixed(0)},00</p>
+            <p class="section__carrinhoLiPreco">R$${produtos.preco.toFixed(2).toString().replace(".", ",")}</p>
             </div>
-            <button class="section__carrinhoExcluir">${count}</button>
+            <button id="${produtos.id}"class="section__carrinhoExcluir">X</button>
             `
-            count++
             ul.appendChild(li);
         });
-       
-        
 
-        const spanQuantidade = document.querySelector(".section__carrinhoSpanQuantidade");
-        spanQuantidade.innerText = data.length;
+        const somaTotal = this.somarValorTotalCarrinho(listaDoCarrinho).toFixed(2).toString().replace(".", ",")
 
-        const spanTotal = document.querySelector(".section__carrinhoSpanTotal");
-        const soma = data.reduce((acc, total) => {
+        spanTotal.innerText = `R$${somaTotal}`
+        spanQuantidade.innerText = listaDoCarrinho.length
+    }
+
+    static somarValorTotalCarrinho(listaCarrinho){
+        return listaCarrinho.reduce((acc, total) => {
             return acc + total.preco
         }, 0);
-        const total = soma.toFixed(0)
-        spanTotal.innerText = `R$${total},00`;
-
     }
 
-    static evento(event) {
-        const botao = event.target.innerText
-        data.splice(botao,1)
+    static interceptarEventoCompra(event){
+        const botaoAdicionarCarrinho = event.target
+        if(botaoAdicionarCarrinho.className == "btn__carrinho" || botaoAdicionarCarrinho.className == "icone__carrinho"){
+            const idProduto = botaoAdicionarCarrinho.id
+            Carrinho.adicionarProdutoCarrinho(idProduto)
+        }
     }
-    
-    
+
+    static interceptarEventoExcluirProduto(event){
+        const botaoExcluirProdutoCarrinho = event.target
+        if(botaoExcluirProdutoCarrinho.className == "section__carrinhoExcluir"){
+            const idProduto = botaoExcluirProdutoCarrinho.id
+            Carrinho.excluirProdutoCarrinho(idProduto)
+        }
+    }
+
+    static adicionarProdutoCarrinho(idProduto){
+        const produtoFiltrado = produtosVitrine.find((produto) => produto.id == idProduto)
+        this.carrinhoProdutos.push(produtoFiltrado)
+        this.templateCarrinho(this.carrinhoProdutos)
+    }
+
+    static excluirProdutoCarrinho(idProduto) {
+        const indice = this.carrinhoProdutos.indexOf((produto) => produto.id == idProduto)
+        this.carrinhoProdutos.splice(indice, 1)
+        this.templateCarrinho(this.carrinhoProdutos)
+    }
 }

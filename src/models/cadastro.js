@@ -1,4 +1,3 @@
-
 export class Usuario {
 
     static usuarioCadastrado(event) {

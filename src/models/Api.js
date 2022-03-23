@@ -1,5 +1,3 @@
-
-
 export class Api {
   static async criarUsuario(data) {
     const resposta = await fetch(

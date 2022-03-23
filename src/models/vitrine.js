@@ -3,7 +3,6 @@ import { Api } from "./Api.js";
 const produtosVitrine = await Api.pegarProdutosPublico()
 const ulVitrine = document.querySelector('.main__vitrine__produtos ul')
 
-
 export class Vitrine{
 
      static async montarVitrinePorudos(listaDeProdutos, caminho){
@@ -41,6 +40,7 @@ export class Vitrine{
             categoriaProduto.innerText = listaDeProdutos[i].categoria
             preco.innerText = `R$${listaDeProdutos[i].preco.toFixed(2).toString().replace(".", ",")}`
             iconeCarrinho.src = "./src/svgs/cart.svg"
+            iconeCarrinho.id = listaDeProdutos[i].id
             divBtnCarrinho.id = listaDeProdutos[i].id
 
 
@@ -62,4 +62,3 @@ export class Vitrine{
 }
 
 Vitrine.montarVitrinePorudos(produtosVitrine, ulVitrine)
-
