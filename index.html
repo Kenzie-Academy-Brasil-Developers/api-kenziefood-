@@ -18,7 +18,7 @@
     <section class="registro__pesquisa">
       <div id="container__um">
         <img class="img__logo" src="/src/img/kenzie-food-logo.png" alt="Kenzie Food">
-        <input type="search" name="pesquisa" placeholder="Pesquisar por produto" class="pesquisa__produtos"></input>
+        <input type="text" name="pesquisa" placeholder="Pesquisar por produto" class="pesquisa__produtos"></input>
       </div>
       <div id="container__dois">
         <button id="btn__cadastro" class="botao__cadastro" ></button>
@@ -41,8 +41,6 @@
        <ul class="main__produtos"></ul>
     </section>
     
-    
-
     <section class="section__carrinho">
       <button class="section__carrinhoAbrir"><img src="./src/svgs/cart-arrow-down-solid.svg">Carrinho</button>
 
@@ -74,18 +72,40 @@
     </section>
 
   </main>
+<<<<<<< HEAD
   
     <footer class="modal__cadastro hidden">
+=======
+  <section class="modal__login">
+    <div class="modal__Div__login">
+      <h1 class="h1__login">Log-in</h1>
+      <button class="btn__sair__modal__login">X</button>
+      <form class="modal__loginForm" action="" name="cadastro">
+        <label>Nome</label>
+        <input type="text" name="name" placeholder="Digite seu nome" class="input__login">
+        <label>Senha</label>
+        <input type="password" name="password" placeholder="Digite uma senha" class="input__login">
+        <p class="container__botoes__login">
+          <button class="btn__logar">Entrar</button>
+          <button type="reset" class="btn__registro"> Registre-se </button>
+        </p>
+      </form>
+    </div>
+</section>
+
+<section class=" modal__cadastro">
+>>>>>>> feature/loginHomePage
     <div class="modal__cadastroDiv">
-      <button class="modal__cadastroButton">X</button>
+      <h1 class="h1__cadastro">Registre-se</h1>
+      <button class="btn__sair__modal__cadastro">X</button>
       <form class="modal__cadastroForm" action="" name="cadastro">
         <label>Nome</label>
-        <input type="text" name="name" placeholder="Nome">
+        <input type="text" name="name" placeholder="Digite seu nome" class="input__cadastro">
         <label>Email</label>
-        <input type="email" name="email" placeholder="Email">
+        <input type="email" name="email" placeholder="Digite seu e-mail" class="input__cadastro">
         <label>Senha</label>
-        <input type="password" name="password" placeholder="Senha">
-        <button>Enviar</button>
+        <input type="password" name="password" placeholder="Digite uma senha" class="input__cadastro">
+        <button id="btn__enviar__cadastro">Enviar</button>
       </form>
    </div>
   </footer>

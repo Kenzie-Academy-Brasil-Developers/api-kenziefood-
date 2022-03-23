@@ -1,28 +1,37 @@
 import { Api } from "./Api.js";
+import { Vitrine } from "./vitrine.js";
 
+const produtosVitrine = await Api.pegarProdutosPublico()
 const campoBusca = document.querySelector('.pesquisa__produtos')
-
-class BuscandoProduto {
+const ulVitrine = document.querySelector('.main__vitrine__produtos ul')
+export class BuscandoProduto {
 
     static async filtroBusca() {
 
-        const data = await Api.pegarProdutosPublico()
+        let produtosFiltrados = []
 
-        const NomesProdutos = produtos.filter((produto) => {
+        const onKeyUp = (event) =>{
+            
+            const caracters = 3
 
-            let busca = campoBusca.value
-    
-            if(busca.toUpperCase() === produto.x.toUpperCase()){
-                return produto.x
-            }else if(busca.toUpperCase() === produto.y.toUpperCase()){
-                return produto.y
-            }else if(busca.toUpperCase() === produto.z.toUpperCase()){
-                return produto.z
-            }
-    
-        });
+            if(event.target.value.length >= caracters){
 
-        xxx(NomesProdutos);
+                produtosVitrine.map((produto) =>{ 
+
+                    if(produto.nome.toLocaleLowerCase().includes(event.target.value.toLocaleLowerCase())){
+                        produtosFiltrados.push(produto)
+                        Vitrine.montarVitrineProdutos(produtosFiltrados, ulVitrine)
+                        produtosFiltrados = []
+
+                    }
+                })
+                
+            }else{
+
+                Vitrine.montarVitrineProdutos(produtosVitrine, ulVitrine)
+
+            } 
+        }
+        campoBusca.addEventListener('keyup', onKeyUp)
     }
-
 }
