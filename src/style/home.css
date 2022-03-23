@@ -75,6 +75,11 @@ button:hover{
     border-radius: 50%;
 }
 
+.btn__carrinho:hover{
+    cursor: pointer;
+    border: 1px solid rgb(0, 112, 0);
+}
+
 .icone__carrinho{
     width: 15px;
 }
