@@ -147,7 +147,8 @@ button:hover{
     background-color: #FFF7F4;
     border: 0;
     border-radius: 32px;
-}    
+} 
+
 /*--------------------------- CARRINHO ----------------------------*/
 
 .section__carrinho{
@@ -165,6 +166,10 @@ button:hover{
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 17.1px;
+}
+.section__carrinhoAbrir img{
+    width: 5vw;
+    padding-right: 10px;
 }
 .section__carrinhoModalDiv{
     width: 100vw;
@@ -185,6 +190,7 @@ button:hover{
     align-items: center;
     border-radius: 9px;
     border: none;
+    height: 90vh;
 }
 .section__carrinhoFechar{
     background-color: #FF2253;
@@ -194,28 +200,37 @@ button:hover{
     border-radius: 9px 9px 0px 0px;
     border: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 14px;
-    align-items: center;
     padding-right: 17px;
     padding-left: 40px;
     font-weight: 500;
+    align-items: center;
+}
+.section__carrinhoFechar img{
+    width: 3vh;
+    padding-right: 15px;
+}
+.section__carrinhoFecharSpanNome{
+
+}
+.section__carrinhoFecharSpanFechar{
+    padding-left: 125px;
 }
 .section__carrinhoUl{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 70vh;
     overflow: auto;
+    height: 70vh;
 }
 .section__carrinhoLi{
     display: flex;
     padding-left: 10px;
     padding-right: 10px;
-    height: 10vh;
-
+    padding-top: 10px;
+    align-items: flex-start;
 }
 .section__carrinhoDivImg{
 
@@ -274,8 +289,12 @@ button:hover{
     font-size: 12px;
 }
 .section__carrinhoExcluir{
-    height: 4vh;
+    height: 3vh;
     border: none;
+    background-color: transparent;
+}
+.section__carrinhoFecharImg{
+    height: 2vh;
 }
 .section__carrinhoSpanTotal{
     padding-right: 15px;
@@ -289,3 +308,4 @@ button:hover{
 .section__carrinhoSpanQuantidade{
     padding-right: 15px;
 }
+/*------------------------------------------------------------------------------*/
