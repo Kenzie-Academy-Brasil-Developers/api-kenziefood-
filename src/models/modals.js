@@ -21,7 +21,6 @@ export class Modal {
         })
         console.log(arrayFiltro)
         Vitrine.montarVitrinePorudos(arrayFiltro, ulVitrine)
-        
 
     }
 
@@ -61,6 +60,7 @@ export class Modal {
         modalCarrinho.style.display = "flex"
     }
 
+<<<<<<< HEAD
     static modalCarrinhoFechar() {
         const botaoFechar = document.querySelector(".section__carrinhoModal");
         botaoFechar.style.display = "none"
@@ -70,3 +70,8 @@ export class Modal {
 
 
 // window.innerHigh || innerWidth = 1
+=======
+    
+
+}
+>>>>>>> 0b4893aba947282370ebd0aba9d7ba82eb8e4c5c

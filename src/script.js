@@ -18,6 +18,7 @@ botaoCadastro.addEventListener("click", Modal.modalCadastro);
 const botaoRemoverModal = document.querySelector(".modal__cadastroButton");
 botaoRemoverModal.addEventListener("click", Modal.modalCadastro);
 
+//modal filtros
 const botaoFiltro = document.querySelector('.button__filtroTodos')
 botaoFiltro.addEventListener('click', Modal.filtroTodos)
 
