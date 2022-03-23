@@ -192,8 +192,19 @@ main {
   width: 170px;
   height: 35px;
   color: white;
+  
+  align-self: center;
+}
+
+.section__botoesFiltro{
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0px;
+
 }
 
 .button__filtro:hover{
   cursor: pointer;
+  color: white;
+  border-radius: 32px;
 } 
