@@ -281,9 +281,9 @@
     width: 3vh;
     padding-right: 15px;
 }
-.section__carrinhoFecharSpanNome{
+/* .section__carrinhoFecharSpanNome{
 
-}
+} */
 .section__carrinhoFecharSpanFechar{
     padding-left: 125px;
 }
@@ -300,15 +300,15 @@
     padding-top: 10px;
     align-items: flex-start;
 }
-.section__carrinhoDivImg{
+/* .section__carrinhoDivImg{
 
-}
+} */
 .section__carrinhoDivNomes{
     width: 55vw;
 }
-.section__carrinhoDivExcluir{
+/* .section__carrinhoDivExcluir{
     
-}
+} */
 .section__carrinhoLiImg{
     width: 21vw;
     height: 10vh;
