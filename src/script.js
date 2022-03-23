@@ -1,6 +1,11 @@
 import { Usuario } from "./models/cadastro.js";
 import { Modal } from "./models/modals.js";
 import { Carrinho } from "./models/carrinho.js";
+import { Vitrine } from "./models/vitrine.js";
+
+
+//VITRINE PRINCIPAL
+
 
 //pegando dados do form de cadastro
 const formCadastro = document.querySelector(".modal__cadastroForm");

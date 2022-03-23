@@ -25,7 +25,7 @@ export class Carrinho {
             <p class="section__carrinhoLiCategoria">${produtos.categoria}</p>
             <p class="section__carrinhoLiPreco">R$${produtos.preco.toFixed(2).toString().replace(".", ",")}</p>
             </div>
-            <button id="${produtos.id}"class="section__carrinhoExcluir">X</button>
+            <button id="${produtos.id}"class="section__carrinhoExcluir"><img class="section__carrinhoFecharImg" src="./src/svgs/trash-solid.svg"></button>
             `
             ul.appendChild(li);
         });
@@ -52,7 +52,7 @@ export class Carrinho {
 
     static interceptarEventoExcluirProduto(event){
         const botaoExcluirProdutoCarrinho = event.target
-        if(botaoExcluirProdutoCarrinho.className == "section__carrinhoExcluir"){
+        if(botaoExcluirProdutoCarrinho.className == "section__carrinhoExcluir" || botaoExcluirProdutoCarrinho.className == "section__carrinhoFecharImg"){
             const idProduto = botaoExcluirProdutoCarrinho.id
             Carrinho.excluirProdutoCarrinho(idProduto)
         }
