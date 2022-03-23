@@ -45,7 +45,7 @@ export class Api {
       .then(res => res.json())
       .then(res => res)
 
-    return resposta
+      return resposta
   }
 
   static async pegarMeusProdutos () {

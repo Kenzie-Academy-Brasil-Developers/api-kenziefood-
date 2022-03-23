@@ -5,9 +5,29 @@ const ulVitrine = document.querySelector('.main__vitrine__produtos ul')
 
 export class Modal {
 
+    static modalLoginTransicao(){
+        const modalDivLogin = document.querySelector('.modal__login')
+        const modalCadastro = document.querySelector('.modal__cadastro')
+        modalDivLogin.style.display = "none"
+        modalCadastro.style.display = "flex"
+    }
+
+    static modalLogin() {
+        const modalLogin = document.querySelector('.modal__login')
+        modalLogin.style.display = "flex"
+
+    }
+
+    static modalLoginSair() {
+        const modalLogin = document.querySelector('.modal__login')
+        modalLogin.style.display = "none"
+
+    }
+
     static modalCadastro() {
-        const modalCadastro = document.querySelector(".modal__cadastro");
-        modalCadastro.classList.toggle('hidden');
+        const modalCadastro = document.querySelector('.modal__cadastro')
+        modalCadastro.style.display = "none"
+        
     }
 
     static async filtros(categoria){
@@ -20,14 +40,14 @@ export class Modal {
             
         })
         console.log(arrayFiltro)
-        Vitrine.montarVitrinePorudos(arrayFiltro, ulVitrine)
+        Vitrine.montarVitrineProdutos(arrayFiltro, ulVitrine)
         
 
     }
 
     static async filtroTodos(){
         const produtosVitrine = await Api.pegarProdutosPublico()
-        Vitrine.montarVitrinePorudos(produtosVitrine, ulVitrine)
+        Vitrine.montarVitrineProdutos(produtosVitrine, ulVitrine)
     }
 
     static filtroPanificadora(event){
@@ -60,5 +80,6 @@ export class Modal {
         const modalCarrinho = document.querySelector(".section__carrinhoModal");
         modalCarrinho.classList.toggle('hidden');
     }
+
 
 }

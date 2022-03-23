@@ -1,4 +1,4 @@
-import { Api } from "./Api"
+import { Api } from "./Api.js"
 
 const form = document.querySelector('form')
 // No script.js do arquivo da pagina, é necessário que haja um addEventListener ->>

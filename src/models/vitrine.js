@@ -5,7 +5,7 @@ const ulVitrine = document.querySelector('.main__vitrine__produtos ul')
 
 export class Vitrine{
 
-     static async montarVitrinePorudos(listaDeProdutos, caminho){
+     static async montarVitrineProdutos(listaDeProdutos, caminho){
         caminho.innerHTML = ""
         for(let i = 0; i < listaDeProdutos.length; i++){
             const cardProduto = document.createElement('li')
@@ -61,4 +61,4 @@ export class Vitrine{
      }
 }
 
-Vitrine.montarVitrinePorudos(produtosVitrine, ulVitrine)
+Vitrine.montarVitrineProdutos(produtosVitrine, ulVitrine)
