@@ -21,7 +21,6 @@ export class Modal {
         })
         console.log(arrayFiltro)
         Vitrine.montarVitrinePorudos(arrayFiltro, ulVitrine)
-        
 
     }
 
