@@ -27,16 +27,17 @@
   </header>
 
   <main class="main__registro">
-    <section class="section__botoes">
-      <nav class="nav__botoes">
-        <button class="button__filtro button__filtroTodos">Todos</button>
-        <button class="button__filtro button__filtroPanificadora">&#129366; Panificadora</button>
-        <button class="button__filtro button__filtroFrutas">&#129373; Frutas</button>
-        <Button class="button__filtro button__filtroBebidas">&#127863; Bebidas</Button>
-      </nav>
-    </section>
+    
 
     <section class="main__vitrine__produtos">
+      <section class="section__botoes">
+        <nav class="nav__botoes">
+          <button class="button__filtro button__filtroTodos">Todos</button>
+          <button class="button__filtro button__filtroPanificadora">&#129366; Panificadora</button>
+          <button class="button__filtro button__filtroFrutas">&#129373; Frutas</button>
+          <Button class="button__filtro button__filtroBebidas">&#127863; Bebidas</Button>
+        </nav>
+      </section>
        <ul class="main__produtos"></ul>
     </section>
     
@@ -45,7 +46,7 @@
     <section class="section__carrinho">
       <button class="section__carrinhoAbrir"><img src="./src/svgs/cart-arrow-down-solid.svg">Carrinho</button>
 
-      <section class="section__carrinhoModal hidden">
+      <section class="section__carrinhoModal">
 
           <div class="section__carrinhoModalDiv">
 
@@ -73,7 +74,8 @@
     </section>
 
   </main>
-  <section class="modal__cadastro hidden">
+  
+    <footer class="modal__cadastro hidden">
     <div class="modal__cadastroDiv">
       <button class="modal__cadastroButton">X</button>
       <form class="modal__cadastroForm" action="" name="cadastro">
@@ -86,7 +88,8 @@
         <button>Enviar</button>
       </form>
    </div>
-  </section>
+  </footer>
+ 
   
   <script type="module" src="./src/script.js"></script>
   <script type ="module" src="./src/models/vitrine.js"></script>

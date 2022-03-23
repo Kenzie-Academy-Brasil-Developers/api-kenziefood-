@@ -30,13 +30,14 @@ botaoFrutas.addEventListener('click',Modal.filtroFrutas)
 
 const botaoBebidas = document.querySelector('.button__filtroBebidas')
 botaoBebidas.addEventListener('click',Modal.filtroBebidas)
-//modal do carrinho
 
+
+//modal do carrinho
 const botaoAbrirCarrinho = document.querySelector(".section__carrinhoAbrir");
 botaoAbrirCarrinho.addEventListener("click", Modal.modalCarrinho);
 
 const botaoFecharCarrinho = document.querySelector(".section__carrinhoFechar");
-botaoFecharCarrinho.addEventListener("click", Modal.modalCarrinho)
+botaoFecharCarrinho.addEventListener("click", Modal.modalCarrinhoFechar)
 
 // Carrinho.excluir()
 const carrinhoUl = document.querySelector(".section__carrinhoUl");

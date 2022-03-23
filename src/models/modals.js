@@ -57,9 +57,15 @@ export class Modal {
     
     static modalCarrinho() {
         const modalCarrinho = document.querySelector(".section__carrinhoModal");
-        modalCarrinho.classList.toggle('hidden');
+        modalCarrinho.style.display = "flex"
     }
 
-    
+    static modalCarrinhoFechar() {
+        const botaoFechar = document.querySelector(".section__carrinhoModal");
+        botaoFechar.style.display = "none"
+    }
 
 }
+
+
+// window.innerHigh || innerWidth = 1
