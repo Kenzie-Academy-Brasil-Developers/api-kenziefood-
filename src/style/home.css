@@ -813,7 +813,8 @@ background-color: #FFFFFF;
     }
 
     .section__carrinhoAbrir{
-        left: 1019px;
+        left: 1049px;
+        width: 315px;
 
     }
 }
@@ -825,9 +826,8 @@ background-color: #FFFFFF;
     }
 
     .section__carrinhoAbrir{
-
-        left: 1130px;
-        margin-top: 25px;
+        left: 1171px;
+        width: 340px;
 
     }
 }
