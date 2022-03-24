@@ -8,6 +8,7 @@ const arrayProdutosPublico = await Api.pegarProdutosPublico()
 const arrayProdutosADM = arrayProdutosNosso.concat(arrayProdutosPublico)
 const vitrine = document.querySelector(".vitrine__produtosTemplate");
 
+let idProduto = ''
 export class ModalADM{
     static async filtrosADM(categoria){
         const arrayFiltro = []
@@ -87,4 +88,24 @@ export class ModalADM{
         const modalExcluirProduto = document.querySelector(".sectionModal__excluirProduto");
         modalExcluirProduto.style.display = "none"
     }
+
+    static async interceptarEventoExcluirProduto(event){
+
+        const botaoExcluirProdutoCarrinho = event.target
+        console.log(botaoExcluirProdutoCarrinho)
+        if(botaoExcluirProdutoCarrinho.className == "vitrine__produtosImgDelete"){
+            
+            idProduto = botaoExcluirProdutoCarrinho.id
+            
+            
+        }
+        else if(botaoExcluirProdutoCarrinho.className == 'vitrine__produtosImgPath'){
+            const idProduto = botaoExcluirProdutoCarrinho.id
+            return idProduto
+        }
+    }
 }
+
+/*const arrayProdutosNosso = await Api.pegarMeusProdutos()    
+            Api.deletarMeuProduto(idProduto)
+            VitrineAdm.vitrineProdutos(arrayProdutosNosso, vitrine)*/

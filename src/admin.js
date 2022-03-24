@@ -27,20 +27,18 @@ const form = document.querySelector('form')
 form.addEventListener('submit', PegarFormulario.gerarData)
 //vitrine editar produto
 const arrayProdutosNosso = await Api.pegarMeusProdutos()
-const arrayProdutosPublico = await Api.pegarProdutosPublico()
 
-const arrayProdutosADM = arrayProdutosNosso.concat(arrayProdutosPublico)
 
-VitrineAdm.vitrineProdutos(arrayProdutosADM, vitrine);
+VitrineAdm.vitrineProdutos(arrayProdutosNosso, vitrine);
 const botaoEditar = document.querySelector(".vitrine__produtosTemplate");
-botaoEditar.addEventListener("click", ModalADM.editarProdutoApiModal);
+botaoEditar.addEventListener("click", ModalADM.interceptarEventoExcluirProduto);
 
 const botaoEditarFechar = document.querySelector(".modal__alterarProdutoFechar");
 botaoEditarFechar.addEventListener("click", ModalADM.fecharEditarProdutoApiModal)
 
 //vitrine excluir produto
 const botaoExcluirProduto = document.querySelector(".vitrine__produtosTemplate");
-botaoExcluirProduto.addEventListener("click", ModalADM.excluirProdutoAbrir);
+botaoExcluirProduto.addEventListener("click", ModalADM.interceptarEventoExcluirProduto);
 
 const botaoExcluirProdutoFechar = document.querySelector(".modal__excluirProdutoBotao");
 botaoExcluirProdutoFechar.addEventListener("click", ModalADM.excluirProdutoAbrirFechar);

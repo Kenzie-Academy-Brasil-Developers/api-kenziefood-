@@ -117,18 +117,17 @@ export class Api {
 
   static async deletarMeuProduto(idProduto) {
     const resposta = await fetch(
-      `https://kenzie-food-api.herokuapp.com/my/products/:${idPost}`,
+      `https://kenzie-food-api.herokuapp.com/my/products/${idProduto}`,
       {
         method: "DELETE", 
         headers: {
           "Content-Type": "application/json", 
           "Authorization": `Bearer ${Api.token}` 
         },
-        body: JSON.stringify(data), 
-      })
+      })/*
       .then((res) => res.json())
       .then((res) => res)
-      .catch((error) => error);
+      .catch((error) => error);*/
     return resposta;
   }
 
