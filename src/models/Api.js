@@ -30,8 +30,10 @@ export class Api {
       .then((resposta) => {
         const token = resposta
 
-        window.localStorage.clear()
+        window.localStorage.removeItem('token')
         window.localStorage.setItem('token', token)
+
+        window.location.href = '/src/pages/admin.html'
       })
       .catch((error) => error);
   
@@ -66,7 +68,7 @@ export class Api {
 
   static async criarProduto(data) {
     const resposta = await fetch(
-      "https://api-blog-m2.herokuapp.com/my/products",
+      "https://kenzie-food-api.herokuapp.com/my/products",
       {
         method: "POST", 
         headers: {
@@ -76,8 +78,15 @@ export class Api {
         body: JSON.stringify(data), 
       })
       .then((res) => res.json())
-      .then((res) => res)
-      .catch((error) => error);
+      .then((res) => {
+        const statusConfirmado = document.querySelector('.section__statusConfirmado')
+        statusConfirmado.style.display = 'flex'
+      })
+      .catch((error) => {
+        const statusNegado = document.querySelector('.section__statusRecusado')
+        statusNegado.style.display = 'flex'
+        return error
+      });
     return resposta;
   }
 
