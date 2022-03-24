@@ -36,7 +36,7 @@
     position: absolute;
     height: 40px;
     top: 75px;
-    background: url(../svg/SearchIcon.svg) no-repeat center left 5px #E9ECEF;
+    background: url(../svgs/SearchIcon.svg) no-repeat center left 5px #E9ECEF;
     border: 1.5px solid #E9ECEF;
     box-sizing: border-box;
     border-radius: 12px;
@@ -54,7 +54,7 @@
     height: 40px;
     top: 35px;
     border-radius: 128.571px;
-    background: url(../svg/userIcon.svg) no-repeat center;
+    background: url(../svgs/userIcon.svg) no-repeat center;
     cursor: pointer;
     border: none;
     transform: translateY(-50%);

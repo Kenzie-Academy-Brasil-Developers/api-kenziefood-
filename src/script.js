@@ -19,17 +19,17 @@ Carrinho.templateCarrinho(Carrinho.carrinhoProdutos)
 // filtro produtos barra pesquisa
 BuscandoProduto.filtroBusca()
 
-//pegando dados do form de cadastro
-const formCadastro = document.querySelector(".modal__cadastroForm");
-formCadastro.addEventListener("submit", Usuario.usuarioCadastrado);
-
 //modal de cadastro
+
+const formCadastro = document.querySelector(".modal__cadastroForm");
+// const botaoEnviarCadastro = document.getElementById('btn__enviar__cadastro')
+formCadastro.addEventListener("submit", Usuario.CadastroNovoUsuario)
 
 const modalBtnRegistro = document.querySelector('.btn__registro')
 modalBtnRegistro.addEventListener('click', Modal.modalLoginTransicao)
 
 const botaoCadastro = document.getElementById("btn__cadastro")
-botaoCadastro.addEventListener("click", Modal.modalLogin)
+botaoCadastro.addEventListener("click", Modal.loginAuto.bind(Modal))
 
 const botaoRemoverModallogin = document.querySelector(".btn__sair__modal__login")
 botaoRemoverModallogin.addEventListener("click", Modal.modalLoginSair)

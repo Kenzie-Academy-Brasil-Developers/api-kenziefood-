@@ -1,5 +1,6 @@
 export class Api {
   static async criarUsuario(data) {
+    
     const resposta = await fetch(
       "https://kenzie-food-api.herokuapp.com/auth/register",
       {
@@ -10,7 +11,10 @@ export class Api {
         body: JSON.stringify(data), 
       })
       .then((res) => res.json())
-      .then((res) => res)
+      .then((res) => {
+        const modalCadastro = document.querySelector('.modal__cadastro')
+        modalCadastro.style.display = "none"
+      })
       .catch((error) => error);
 
     return resposta;
