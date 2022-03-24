@@ -6,7 +6,8 @@ const spanTotal = document.querySelector(".section__carrinhoSpanTotal")
 const spanQuantidade = document.querySelector(".section__carrinhoSpanQuantidade")
 
 export class Carrinho {
-    static carrinhoProdutos = []
+    static localStorageCarrinho = JSON.parse(localStorage.getItem('produtosCarrinho'))
+    static carrinhoProdutos = localStorage.getItem('produtosCarrinho') !== null ? this.localStorageCarrinho : []
 
     static templateCarrinho(listaDoCarrinho) {
         ul.innerHTML = ""
@@ -61,12 +62,19 @@ export class Carrinho {
     static adicionarProdutoCarrinho(idProduto){
         const produtoFiltrado = produtosVitrine.find((produto) => produto.id == idProduto)
         this.carrinhoProdutos.push(produtoFiltrado)
+        this.updateLocalStorage()
         this.templateCarrinho(this.carrinhoProdutos)
     }
 
     static excluirProdutoCarrinho(idProduto) {
         const indice = this.carrinhoProdutos.indexOf((produto) => produto.id == idProduto)
         this.carrinhoProdutos.splice(indice, 1)
+        this.updateLocalStorage()
         this.templateCarrinho(this.carrinhoProdutos)
+        
+    }
+
+    static updateLocalStorage = () =>{
+        localStorage.setItem('produtosCarrinho', JSON.stringify(this.carrinhoProdutos)) 
     }
 }
