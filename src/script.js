@@ -35,7 +35,7 @@ botaoRemoverModalcadastro.addEventListener("click", Modal.modalCadastro)
 
 //pegar formulario login
 const form = document.querySelector('form')
-form.addEventListener('submit', PegarFormulario.gerarData)
+form.addEventListener('submit', PegarFormulario.gerarData.bind(PegarFormulario))
 
 //modal filtros
 const botaoFiltro = document.querySelector('.button__filtroTodos')

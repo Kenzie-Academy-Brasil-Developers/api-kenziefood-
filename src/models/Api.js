@@ -28,12 +28,16 @@ export class Api {
       })
       .then((res) => res.json())
       .then((resposta) => {
-        const token = resposta
+        if (typeof resposta === 'string') {
+          const token = resposta
+          console.log(token)
 
-        window.localStorage.removeItem('token')
-        window.localStorage.setItem('token', token)
+          window.localStorage.removeItem('token')
+          window.localStorage.setItem('token', token)
 
-        window.location.href = '/src/pages/admin.html'
+          window.location.href = '/src/pages/admin.html'
+        }
+
       })
       .catch((error) => error);
   
