@@ -1,4 +1,7 @@
 import { ModalADM } from "./models/modalADM.js";
+import { PegarFormulario } from "./models/PegarFormulario.js";
+
+
 
 const botaoFiltro = document.querySelector('.button__filtroTodos')
 botaoFiltro.addEventListener('click', ModalADM.filtroTodosADM)
@@ -17,3 +20,6 @@ botaoAdicionarProduto.addEventListener('click',ModalADM.abrirAdicionarProdutoMod
 
 const botaoFecharCadastro = document.querySelector('.section__fecharmodal')
 botaoFecharCadastro.addEventListener('click',ModalADM.fecharAdicionarProdutoModal)
+
+const form = document.querySelector('form')
+form.addEventListener('submit', PegarFormulario.gerarData)

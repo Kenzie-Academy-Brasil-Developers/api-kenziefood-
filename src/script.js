@@ -4,6 +4,8 @@ import { Carrinho } from "./models/carrinho.js";
 import { Vitrine } from "./models/vitrine.js";
 import { BuscandoProduto } from "./models/pesquisarProduto.js";
 import { Api } from "./models/Api.js";
+import { PegarFormulario } from "./models/PegarFormulario.js";
+
 
 //VITRINE PRINCIPAL
 const produtosVitrine = await Api.pegarProdutosPublico()
@@ -30,6 +32,10 @@ botaoRemoverModallogin.addEventListener("click", Modal.modalLoginSair)
 
 const botaoRemoverModalcadastro = document.querySelector(".btn__sair__modal__cadastro")
 botaoRemoverModalcadastro.addEventListener("click", Modal.modalCadastro)
+
+//pegar formulario login
+const form = document.querySelector('form')
+form.addEventListener('submit', PegarFormulario.gerarData)
 
 //modal filtros
 const botaoFiltro = document.querySelector('.button__filtroTodos')

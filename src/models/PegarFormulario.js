@@ -28,9 +28,13 @@ export class PegarFormulario {
     if(form.id === "form__cadastro" || form.id === "formCadastro"){
       console.log(data)
       Api.criarUsuario(data)
-    } else if (form.id === "form__login" || form.id === "formLogin") {
+    } else if (form.id === "modal__loginForm") {
       console.log(data)
       Api.login(data)
+    }
+    else if(form.id === "form__cadastroProduto"){
+      console.log(data)
+      Api.criarProduto(data)
     }
   }
 

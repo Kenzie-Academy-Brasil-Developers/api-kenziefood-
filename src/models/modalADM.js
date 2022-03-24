@@ -1,5 +1,5 @@
 import { Api } from "./Api.js"
-
+import { PegarFormulario } from "./PegarFormulario.js"
 
 export class ModalADM{
     static async filtrosADM(categoria){
@@ -54,5 +54,6 @@ export class ModalADM{
         const modalAdicionarProduto = document.querySelector(".sectionModal__cadastroProduto");
         modalAdicionarProduto.style.display = "none"
     }
-    
+
+   
 }
