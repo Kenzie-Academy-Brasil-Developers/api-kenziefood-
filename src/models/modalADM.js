@@ -45,9 +45,14 @@ export class ModalADM{
         ModalADM.filtrosADM(click)
     }
 
-    static adicionarProdutoModal(){
+    static abrirAdicionarProdutoModal(){
         const modalAdicionarProduto = document.querySelector(".sectionModal__cadastroProduto");
-        modalAdicionarProduto.classList.toggle('hidden');
+        modalAdicionarProduto.style.display = "flex"
+    }
+
+    static fecharAdicionarProdutoModal(){
+        const modalAdicionarProduto = document.querySelector(".sectionModal__cadastroProduto");
+        modalAdicionarProduto.style.display = "none"
     }
     
 }

@@ -13,7 +13,7 @@ const botaoBebidas = document.querySelector('.button__filtroBebidas')
 botaoBebidas.addEventListener('click',ModalADM.filtroBebidasADM)
 
 const botaoAdicionarProduto = document.querySelector('.button__cadastrarNovoProduto')
-botaoAdicionarProduto.addEventListener('click',ModalADM.adicionarProdutoModal)
+botaoAdicionarProduto.addEventListener('click',ModalADM.abrirAdicionarProdutoModal)
 
 const botaoFecharCadastro = document.querySelector('.section__fecharmodal')
-botaoFecharCadastro.addEventListener('click',ModalADM.adicionarProdutoModal)
+botaoFecharCadastro.addEventListener('click',ModalADM.fecharAdicionarProdutoModal)
