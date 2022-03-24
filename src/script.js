@@ -3,11 +3,14 @@ import { Modal } from "./models/modals.js";
 import { Carrinho } from "./models/carrinho.js";
 import { Vitrine } from "./models/vitrine.js";
 import { BuscandoProduto } from "./models/pesquisarProduto.js";
+import { Api } from "./models/Api.js";
 
 //VITRINE PRINCIPAL
+const produtosVitrine = await Api.pegarProdutosPublico()
+const ulVitrine = document.querySelector('.main__vitrine__produtos ul')
+Vitrine.montarVitrineProdutos(produtosVitrine, ulVitrine)
 
 // filtro produtos barra pesquisa
-
 BuscandoProduto.filtroBusca()
 
 //pegando dados do form de cadastro

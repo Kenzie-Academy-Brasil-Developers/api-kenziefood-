@@ -1,8 +1,3 @@
-import { Api } from "./Api.js";
-
-const produtosVitrine = await Api.pegarProdutosPublico()
-const ulVitrine = document.querySelector('.main__vitrine__produtos ul')
-
 export class Vitrine{
 
      static async montarVitrineProdutos(listaDeProdutos, caminho){
@@ -31,7 +26,6 @@ export class Vitrine{
             preco.className = "preco__produto"
             iconeCarrinho.className = "icone__carrinho"
             divBtnCarrinho.className = "btn__carrinho"
-            
 
             img.src = listaDeProdutos[i].imagem
             img.alt = "imagem do produto"
@@ -42,7 +36,6 @@ export class Vitrine{
             iconeCarrinho.src = "./src/svgs/cart.svg"
             iconeCarrinho.id = listaDeProdutos[i].id
             divBtnCarrinho.id = listaDeProdutos[i].id
-
 
             divImagem.appendChild(img)
 
@@ -60,5 +53,3 @@ export class Vitrine{
         }
      }
 }
-
-Vitrine.montarVitrineProdutos(produtosVitrine, ulVitrine)
