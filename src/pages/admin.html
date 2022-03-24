@@ -48,8 +48,10 @@
         <li>Descrição</li>
         <li>Ações</li>
       </ul>
-      <!-- Aqui será colocada a lista de itens
-       podendo ser -->
+
+      <ul class="vitrine__produtosTemplate">
+
+      </ul>
 
     </ul>
   </main>
@@ -88,8 +90,8 @@
   <section class="sectionModal sectionModal__alterarProduto">
     <nav class="modal__alterarProduto modal__admin">
       <header>
-        <p>Alterar Produto</p>
-        <button>X</button>
+        <p>Edição de produto</p>
+        <button class="modal__alterarProdutoFechar">x</button>
       </header>
         <form class="modal__formulario modal__formEditar" id="form__editarProduto">
           <label>Nome do Produto</label>
@@ -111,9 +113,9 @@
           <label>Link da imagem</label>
           <input type="url" name="imagem" placeholder="Inserir link">
 
-          <div>
+          <div class="modal__formBotoesEditar">
             <button class="modal__formBotaoExcluir" type="reset">Excluir</button>
-            <button class="modal__formBotaoSalvar" type="submit">Salvar alteração</button>
+            <button class="modal__formBotaoSalvar" type="submit">Salvar alteraçôes</button>
           </div>
         </form>
     </nav>
@@ -123,7 +125,7 @@
     <nav class="modal__excluirProduto modal__admin">
       <header>
         <p>Exclusão de produto</p>
-        <button>X</button>
+        <button class="modal__excluirProdutoBotao">x</button>
       </header>
       <form class="modal__formulario modal__formExcluir" id="form__excluirProduto">
         <p>Tem certeza que deseja excluir este produto?</p>

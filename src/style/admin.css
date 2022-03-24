@@ -86,7 +86,6 @@ body {
 /* FINAL DO HEADER */
 
 main {
-  margin: 0% 5% auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,6 +101,7 @@ main {
   color: rgba(134, 142, 150, 1);
   font-size: 14px;
   line-height: 24px;
+  margin: 0px 10px;
 }
 
 /* MODAIS*/
@@ -120,30 +120,34 @@ main {
 }
 
 .modal__admin {
-  margin-top: 100px;
-  height: 50vh;
+  position: relative;
+  top: 24%;
   background-color:rgba(248, 249, 250, 1);
-
   border-radius: 5px;
 }
 
 .modal__admin > header {
-  background-color: rgba(233, 236, 239, 1);
+  background-color: #F8F9FA;
   height: 10%;
   display: flex;
   justify-content: space-between;
-  align-items: center
-  ;
+  align-items: center;
   padding: 5px 15px;
-
   border-radius: 5px 5px 0px 0px;
+}
+.modal__admin > header > p{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .modal__admin > header > button {
   height: fit-content;
-  background-color: rgb(211, 209, 209);
-  border: 1px solid rgb(173, 173, 173);
+  background-color: #E9ECEF;
+  border: none;
   border-radius: 5px;
+  color: #868E96;
+  background-color: #F8F9FA;
 }
 
 .modal__formulario {
@@ -151,22 +155,31 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  background-color: #FFF;
   padding: 15px;
 }
 
 .modal__formulario > label {
   margin-bottom: 0;
   font-size: 10px;
+  font-weight: 400;
+  padding-bottom: 2px;
+  padding-top: 5px;
 }
 
 .modal__formulario > input {
-  background-color: rgba(233, 236, 239, 1);
-  border: 1px solid rgb(163, 164, 165);
+  background-color: #F8F9FA;
+  border: 1px solid #DEE2E6;
   padding: 5px 2px;
   border-radius: 6px;
-
-  color: rgba(134, 142, 150, 1);
+  font-size: 12px;
+  color: #868E96;
+}
+.modal__formulario > input:hover{
+  color: #212529;
+}
+.modal__formulario > label:hover{
+  color: #212529;
 }
 
 .modal__formulario > select {
@@ -191,6 +204,9 @@ main {
   border: 1px solid rgba(255, 34, 83, 1);
   border-radius: 20px;
 
+}
+.modal__formBotoesEditar{
+  padding-top: 11px;
 }
 
 .modal__formBotaoExcluir {
@@ -231,6 +247,8 @@ main {
 
 .modal__excluirProduto > form > p {
   font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
 }
 
 .modal__excluirProduto > form > div {
@@ -381,6 +399,106 @@ main {
 .section__statusConfirmado {
   display: none;
 }
+
+/*-----------TEMPLATE PRODUTOS---------------*/
+
+.vitrine__produtosTemplate{
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  height: 42vh;
+  margin: 0px 10px;
+}
+.vitrine__produtosTemplateLi{
+  border: 1px solid #E9ECEF;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+}
+.vitrine__produtosTemplateDivImg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 20vh;
+}
+.vitrine__produtosTemplateImg{
+  width: 16vw;
+  height: 9vh;
+  border-radius: 32px 24px 21px 29px;
+  padding-top: 3px;
+  padding-left: 8px;
+}
+.vitrine__produtosTemplateDivImg span{
+  font-size: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 8px;
+  width: 13vw;
+  text-align: center;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+.vitrine__produtosTemplateDivCategoria{
+  display: flex;
+  align-items: center;
+  width: 19vw;
+  justify-content: center;
+}
+.vitrine__produtosTemplateDivCategoria button{
+  font-size: 10px;
+  color: #868E96;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  border-radius: 7px;
+  font-weight: 400;
+}
+.vitrine__produtosTemplateDivDescricao{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+}
+.vitrine__produtosTemplateDivDescricao span{
+  font-size: 10px;
+  text-align: center;
+  width: 24vw;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'Poppins', sans-serif;
+  color: #868E96;
+  font-weight: 400;
+}
+.vitrine__produtosTemplateDivBotoes{
+  display: flex;
+  align-items: center;
+  width: 15vw;
+  justify-content: space-evenly;
+  justify-content: space-between;
+}
+.vitrine__produtosTemplateBotaoPath{
+  border-radius: 11px;
+  border: none;
+  background-color: #F8F9FA;
+}
+.vitrine__produtosImgPath{
+  height: 2vh;
+}
+.vitrine__produtosTemplateBotaoDelete{
+  border-radius: 11px;
+  border: none;
+  background-color: #F8F9FA;
+}
+.vitrine__produtosImgDelete{
+  height: 2vh;
+}
+
+
+
 
 /* MEDIA QUERIES */
 
