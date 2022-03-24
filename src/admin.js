@@ -1,4 +1,5 @@
 import { ModalADM } from "./models/modalADM.js";
+import { VitrineAdm } from "./models/vitrineAdm.js";
 
 const botaoFiltro = document.querySelector('.button__filtroTodos')
 botaoFiltro.addEventListener('click', ModalADM.filtroTodosADM)
@@ -17,3 +18,19 @@ botaoAdicionarProduto.addEventListener('click',ModalADM.abrirAdicionarProdutoMod
 
 const botaoFecharCadastro = document.querySelector('.section__fecharmodal')
 botaoFecharCadastro.addEventListener('click',ModalADM.fecharAdicionarProdutoModal)
+
+//vitrine editar produto
+VitrineAdm.vitrineProdutos();
+const botaoEditar = document.querySelector(".vitrine__produtosTemplate");
+botaoEditar.addEventListener("click", ModalADM.editarProdutoApiModal);
+
+const botaoEditarFechar = document.querySelector(".modal__alterarProdutoFechar");
+botaoEditarFechar.addEventListener("click", ModalADM.fecharEditarProdutoApiModal)
+
+//vitrine excluir produto
+const botaoExcluirProduto = document.querySelector(".vitrine__produtosTemplate");
+botaoExcluirProduto.addEventListener("click", ModalADM.excluirProdutoAbrir);
+
+const botaoExcluirProdutoFechar = document.querySelector(".modal__excluirProdutoBotao");
+botaoExcluirProdutoFechar.addEventListener("click", ModalADM.excluirProdutoAbrirFechar);
+

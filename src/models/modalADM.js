@@ -55,4 +55,29 @@ export class ModalADM{
         modalAdicionarProduto.style.display = "none"
     }
     
+    static editarProdutoApiModal(event){
+        const botaoEditar = event.target;
+        if(botaoEditar.className === "vitrine__produtosImgPath"){
+            const modalEditarProduto = document.querySelector(".sectionModal__alterarProduto");
+            modalEditarProduto.style.display = "flex"
+        }
+    }
+
+    static fecharEditarProdutoApiModal(){
+        const modalEditarProduto = document.querySelector(".sectionModal__alterarProduto");
+        modalEditarProduto.style.display = "none"
+    }
+
+    static excluirProdutoAbrir(event) {
+        const botaoExcluir = event.target;
+        if(botaoExcluir.className === "vitrine__produtosImgDelete"){
+            const modalExcluirProduto = document.querySelector(".sectionModal__excluirProduto");
+            modalExcluirProduto.style.display = "flex";
+        }  
+    }
+
+    static excluirProdutoAbrirFechar(){
+        const modalExcluirProduto = document.querySelector(".sectionModal__excluirProduto");
+        modalExcluirProduto.style.display = "none"
+    }
 }
