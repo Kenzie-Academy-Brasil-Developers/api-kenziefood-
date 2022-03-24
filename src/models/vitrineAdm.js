@@ -2,12 +2,12 @@ import { Api } from "./Api.js";
 
 export class VitrineAdm {
 
-    static async vitrineProdutos() {
-
-        const data = await Api.pegarProdutosPublico();
-        const vitrine = document.querySelector(".vitrine__produtosTemplate");
+    static async vitrineProdutos(listaDeProdutos, caminho) {
+        caminho.innerHTML = ""
+        //const data = await Api.pegarProdutosPublico();
         
-        data.forEach(produtos => {
+        
+        listaDeProdutos.forEach(produtos => {
 
             const li = document.createElement("li");
             li.className = "vitrine__produtosTemplateLi";
@@ -37,7 +37,7 @@ export class VitrineAdm {
 
             </div>
             `;
-            vitrine.appendChild(li);
+            caminho.appendChild(li);
         });
 
     }

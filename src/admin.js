@@ -1,9 +1,10 @@
+import { Api } from "./models/Api.js";
 import { ModalADM } from "./models/modalADM.js";
 import { PegarFormulario } from "./models/PegarFormulario.js";
 
 
 import { VitrineAdm } from "./models/vitrineAdm.js";
-
+const vitrine = document.querySelector(".vitrine__produtosTemplate");
 const botaoFiltro = document.querySelector('.button__filtroTodos')
 botaoFiltro.addEventListener('click', ModalADM.filtroTodosADM)
 
@@ -25,7 +26,12 @@ botaoFecharCadastro.addEventListener('click',ModalADM.fecharAdicionarProdutoModa
 const form = document.querySelector('form')
 form.addEventListener('submit', PegarFormulario.gerarData)
 //vitrine editar produto
-VitrineAdm.vitrineProdutos();
+const arrayProdutosNosso = await Api.pegarMeusProdutos()
+const arrayProdutosPublico = await Api.pegarProdutosPublico()
+
+const arrayProdutosADM = arrayProdutosNosso.concat(arrayProdutosPublico)
+
+VitrineAdm.vitrineProdutos(arrayProdutosADM, vitrine);
 const botaoEditar = document.querySelector(".vitrine__produtosTemplate");
 botaoEditar.addEventListener("click", ModalADM.editarProdutoApiModal);
 

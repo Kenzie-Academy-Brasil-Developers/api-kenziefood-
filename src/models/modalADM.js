@@ -1,13 +1,21 @@
 import { Api } from "./Api.js"
 import { PegarFormulario } from "./PegarFormulario.js"
+import { VitrineAdm } from "./vitrineAdm.js"
+
+const arrayProdutosNosso = await Api.pegarMeusProdutos()
+const arrayProdutosPublico = await Api.pegarProdutosPublico()
+
+const arrayProdutosADM = arrayProdutosNosso.concat(arrayProdutosPublico)
+const vitrine = document.querySelector(".vitrine__produtosTemplate");
 
 export class ModalADM{
     static async filtrosADM(categoria){
         const arrayFiltro = []
-        const arrayProdutos = await Api.pegarProdutosPublico()
-        arrayProdutos.forEach(produto =>{
+        
+        arrayProdutosADM.forEach(produto =>{
             if(produto.categoria == categoria){
                 arrayFiltro.push(produto)
+                VitrineAdm.vitrineProdutos(arrayFiltro, vitrine)
             }
             
         })
@@ -17,8 +25,7 @@ export class ModalADM{
     }
 
     static async filtroTodosADM(){
-        const produtosVitrine = await Api.pegarProdutosPublico()
-        console.log(produtosVitrine)
+        VitrineAdm.vitrineProdutos(arrayProdutosADM, vitrine)
     }
 
     static filtroPanificadoraADM(event){
