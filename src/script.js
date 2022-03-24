@@ -12,6 +12,10 @@ const produtosVitrine = await Api.pegarProdutosPublico()
 const ulVitrine = document.querySelector('.main__vitrine__produtos ul')
 Vitrine.montarVitrineProdutos(produtosVitrine, ulVitrine)
 
+//carrinho localStorage
+const ul = document.querySelector(".section__carrinhoUl")
+Carrinho.templateCarrinho(Carrinho.carrinhoProdutos)
+
 // filtro produtos barra pesquisa
 BuscandoProduto.filtroBusca()
 
