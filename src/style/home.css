@@ -7,6 +7,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 #container__um{
@@ -23,7 +24,7 @@
 .img__logo{
     position: absolute;
     height: 55px;
-    left: 1px;
+    left: 10px;
     top: 5px;
 }
 
@@ -40,7 +41,7 @@
     box-sizing: border-box;
     border-radius: 12px;
     width: 280px;
-    margin: 0px 5px 5px 90px;
+    margin: 0px 5px 5px 100px;
 }
 
 #container__dois{
@@ -558,13 +559,19 @@ background-color: #FFFFFF;
     #btn__cadastro{
         left: 40px;
     }
+
+    .img__logo{
+
+        left: 20px;
+
+    }
 }
 
 @media (min-width: 425px){
 
     .pesquisa__produtos{
         width: 365px;
-        margin: 0px 5px 5px 130px;  
+        margin: 0px 5px 5px 125px;  
     }
     #btn__cadastro{
         left: 55px;
@@ -581,19 +588,22 @@ background-color: #FFFFFF;
         left: 0px;
         top: 0px;
         flex-direction: row-reverse;
-        justify-content: flex-start
+        justify-content: flex-start;
+        box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
     }
 
     #container__um{
-        width: 50px;
+        width: 15px;
         height: 150px;
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
+        margin-left: -70px;
+
     }
 
     .nav__botoes{
-        margin: 1px 12px 10px 130px;
+        margin: 10px 12px 10px 130px;
     }
         
     #container__dois{
@@ -612,14 +622,15 @@ background-color: #FFFFFF;
         position: absolute;
         width: 312px;
         height: 40px;
-        left: 345px;
+        left: 390px;
         top: 15px;
-        margin: 0px;   
+        margin: 0px; 
+          
     }
         
     #btn__cadastro{
-        top: 24px;
-        left: -37px;
+        top: 20px;
+        left: -105px;
     }
         
     .section__carrinhoAbrir{
@@ -650,8 +661,19 @@ background-color: #FFFFFF;
 }
 
 @media (min-width: 1024px){
+    .registro__pesquisa{
+
+        box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
+
+    }
+    
     .pesquisa__produtos{
-        left: 650px;
+        left: 605px;
+        width: 350px;
+    }
+
+    #btn__cadastro{
+        left: -105px;
     }
 
     .main__registro{
@@ -709,7 +731,7 @@ background-color: #FFFFFF;
 
     .section__carrinhoAbrir{
         width: 24vw;
-        left: 72%;
+        left: 710px;
         top: 14%;
         position: fixed;
         height: 5vh;
@@ -783,21 +805,37 @@ background-color: #FFFFFF;
 @media (min-width: 1440px){
 
     .pesquisa__produtos{
-        left: 1070px;
+        left: 1015px;
+    }
+
+    #btn__cadastro {
+        left: -115px;
+    }
+
+    .section__carrinhoAbrir{
+        left: 1019px;
+
     }
 }
 
 @media (min-width: 1600px){
 
     .pesquisa__produtos{
-        left: 1230px;
+        left: 1160px;
+    }
+
+    .section__carrinhoAbrir{
+
+        left: 1130px;
+        margin-top: 25px;
+
     }
 }
 
 @media (min-width: 2560px){
 
     .pesquisa__produtos{
-        left: 2180px;
+        left: 2135px;
     }
 }
 
