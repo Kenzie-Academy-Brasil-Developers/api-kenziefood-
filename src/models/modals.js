@@ -30,6 +30,22 @@ export class Modal {
         
     }
 
+    static loginAuto(){
+
+        if(Api.token !== null){
+            
+            if(Api.token.length === 176){
+                window.location.href = '/src/pages/admin.html'
+
+            }
+            
+        }else{
+
+        this.modalLogin()
+        }
+
+    }
+
     static async filtros(categoria){
         const arrayFiltro = []
         const arrayProdutos = await Api.pegarProdutosPublico()

@@ -42,6 +42,15 @@ body {
 
 }
 
+.btn__home{
+
+  background: #FF2253;
+  border: 1.5px solid #FF2253;
+  box-sizing: border-box;
+  border-radius: 30px;
+
+}
+
 .pesquisa__produtos{
 
   display: flex;
@@ -51,7 +60,7 @@ body {
   position: absolute;
   height: 45px;
   top: 75px;
-  background: url(../svg/SearchIcon.svg) no-repeat center left 5px #E9ECEF;
+  background: url(../svgs/SearchIcon.svg) no-repeat center left 5px #E9ECEF;
   border: 1.5px solid #E9ECEF;
   box-sizing: border-box;
   border-radius: 12px;
@@ -73,7 +82,7 @@ body {
   height: 40px;
   top: 35px;
   border-radius: 128.571px;
-  background: url(../svg/userIcon.svg) no-repeat center;
+  background: url(../svgs/userIcon.svg) no-repeat center;
   cursor: pointer;
   border: none;
   transform: translateY(-50%);
@@ -426,7 +435,8 @@ main {
       left: 0px;
       top: 0px;
       flex-direction: row-reverse;
-      justify-content: flex-start
+      justify-content: flex-start;
+      box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
 
   }
 
@@ -478,6 +488,12 @@ main {
 
 @media (min-width: 1024px){
 
+  .registro__pesquisa{
+
+    box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
+
+}
+  
   .pesquisa__produtos{
 
       left: 650px;
@@ -488,6 +504,12 @@ main {
 
 @media (min-width: 1440px){
 
+  .registro__pesquisa{
+
+    box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
+
+}
+  
   .pesquisa__produtos{
 
       left: 1070px;
@@ -498,6 +520,12 @@ main {
 
 @media (min-width: 1600px){
 
+  .registro__pesquisa{
+
+    box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
+
+}
+  
   .pesquisa__produtos{
 
       left: 1230px;
@@ -509,6 +537,12 @@ main {
 
 @media (min-width: 2560px){
 
+  .registro__pesquisa{
+
+    box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
+
+}
+  
   .pesquisa__produtos{
 
       left: 2180px;
