@@ -77,11 +77,16 @@ export class ModalADM{
     }
 
     static excluirProdutoAbrir(event) {
-        const botaoExcluir = event.target;
-        if(botaoExcluir.className === "vitrine__produtosImgDelete"){
+        const botaoExcluirProdutoCarrinho = event.target
+        console.log(botaoExcluirProdutoCarrinho)
+        if(botaoExcluirProdutoCarrinho.className == "vitrine__produtosImgDelete"){
             const modalExcluirProduto = document.querySelector(".sectionModal__excluirProduto");
             modalExcluirProduto.style.display = "flex";
-        }  
+            idProduto = botaoExcluirProdutoCarrinho.id
+            console.log(idProduto)
+            console.log(modalExcluirProduto)
+            
+        }
     }
 
     static excluirProdutoAbrirFechar(){
@@ -89,21 +94,18 @@ export class ModalADM{
         modalExcluirProduto.style.display = "none"
     }
 
-    static async interceptarEventoExcluirProduto(event){
-
-        const botaoExcluirProdutoCarrinho = event.target
-        console.log(botaoExcluirProdutoCarrinho)
-        if(botaoExcluirProdutoCarrinho.className == "vitrine__produtosImgDelete"){
-            
-            idProduto = botaoExcluirProdutoCarrinho.id
-            
-            
-        }
-        else if(botaoExcluirProdutoCarrinho.className == 'vitrine__produtosImgPath'){
-            const idProduto = botaoExcluirProdutoCarrinho.id
-            return idProduto
-        }
+    static async exclusaoConfirmada(event){
+        event.preventDefault()
+        Api.deletarMeuProduto(idProduto)
+        ModalADM.modalCadastrodeProduto()
+        
     }
+
+    static async modalCadastrodeProduto(){
+        const arrayProdutosNosso = await Api.pegarMeusProdutos()
+        VitrineAdm.vitrineProdutos(arrayProdutosNosso, vitrine)
+    }
+
 }
 
 /*const arrayProdutosNosso = await Api.pegarMeusProdutos()    

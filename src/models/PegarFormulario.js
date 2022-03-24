@@ -1,4 +1,6 @@
 import { Api } from "./Api.js"
+import { ModalADM } from "./modalADM.js"
+
 
 const form = document.querySelector('form')
 // No script.js do arquivo da pagina, é necessário que haja um addEventListener ->>
@@ -35,6 +37,7 @@ export class PegarFormulario {
     else if(form.id === "form__cadastroProduto"){
       console.log(data)
       Api.criarProduto(data)
+      ModalADM.modalCadastrodeProduto()
     }
   }
 

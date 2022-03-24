@@ -5,6 +5,7 @@ import { PegarFormulario } from "./models/PegarFormulario.js";
 
 import { VitrineAdm } from "./models/vitrineAdm.js";
 const vitrine = document.querySelector(".vitrine__produtosTemplate");
+//filtro
 const botaoFiltro = document.querySelector('.button__filtroTodos')
 botaoFiltro.addEventListener('click', ModalADM.filtroTodosADM)
 
@@ -23,15 +24,17 @@ botaoAdicionarProduto.addEventListener('click',ModalADM.abrirAdicionarProdutoMod
 const botaoFecharCadastro = document.querySelector('.section__fecharmodal')
 botaoFecharCadastro.addEventListener('click',ModalADM.fecharAdicionarProdutoModal)
 
+//botao de cadastro de produto
 const form = document.querySelector('form')
+
 form.addEventListener('submit', PegarFormulario.gerarData)
+
+
 //vitrine editar produto
 const arrayProdutosNosso = await Api.pegarMeusProdutos()
-
-
 VitrineAdm.vitrineProdutos(arrayProdutosNosso, vitrine);
 const botaoEditar = document.querySelector(".vitrine__produtosTemplate");
-botaoEditar.addEventListener("click", ModalADM.interceptarEventoExcluirProduto);
+botaoEditar.addEventListener("click", ModalADM.excluirProdutoAbrir);
 
 const botaoEditarFechar = document.querySelector(".modal__alterarProdutoFechar");
 botaoEditarFechar.addEventListener("click", ModalADM.fecharEditarProdutoApiModal)
@@ -42,4 +45,7 @@ botaoExcluirProduto.addEventListener("click", ModalADM.interceptarEventoExcluirP
 
 const botaoExcluirProdutoFechar = document.querySelector(".modal__excluirProdutoBotao");
 botaoExcluirProdutoFechar.addEventListener("click", ModalADM.excluirProdutoAbrirFechar);
+
+const botaoConfirmarexclusao = document.querySelector('.button__confirmarExclusao')
+botaoConfirmarexclusao.addEventListener('click', ModalADM.exclusaoConfirmada)
 
