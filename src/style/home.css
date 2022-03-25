@@ -235,6 +235,7 @@ label{
     height: 38px;
     width: 38px;
     border-radius: 50%;
+    border: solid 1px white;
 }
 
 .btn__carrinho:hover{
