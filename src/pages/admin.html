@@ -15,6 +15,42 @@
 <body>
 
   <header>
+    <div>
+      <section class="sectionModal sectionModal__alterarProduto">
+        <nav class="modal__alterarProduto modal__admin">
+          <header>
+            <p>Edição de produto</p>
+            <button class="modal__alterarProdutoFechar">x</button>
+          </header>
+             <div>
+            <form class="modal__formulario modal__formEditar" id="form__editarProduto">
+              <label>Nome do Produto</label>
+              <input type="text" name="nome" placeholder="Digitar o nome">
+              <label>Descrição</label>
+              <input type="text" name="descricao" placeholder="Digitar a descrição">
+    
+              <label>Categoria</label>
+              <select name="categoria" id="select__cadastroProduto">
+                <option disabled selected hidden value="">Escolher categoria</option>
+                <option value="Panificadora">Panificadora</option>
+                <option value="Frutas">Frutas</option>
+                <option value="Bebidas">Bebidas</option>
+              </select>
+    
+              <label>Valor do Produto</label>
+              <input type="number" name="preco" placeholder="Digitar o valor aqui">
+              <label>Link da imagem</label>
+              <input type="url" name="imagem" placeholder="Inserir link">
+    
+              <div class="modal__formBotoesEditar">
+                <button class="modal__formBotaoSalvar">Salvar alteraçôes</button>
+                <button class="modal__formBotaoExcluir">Excluir</button>
+              </div>
+            </form>
+          </div>
+        </nav>
+      </section>
+    </div>
     <section class="registro__pesquisa">
       <div id="container__um">
         <img class="img__logo" src="/src/img/kenzie-food-logo.png" alt="Kenzie Food">
@@ -86,39 +122,8 @@
     </nav>
   </section>
 
-  <section class="sectionModal sectionModal__alterarProduto">
-    <nav class="modal__alterarProduto modal__admin">
-      <header>
-        <p>Edição de produto</p>
-        <button class="modal__alterarProdutoFechar">x</button>
-      </header>
-        <form class="modal__formulario modal__formEditar" id="form__editarProduto">
-          <label>Nome do Produto</label>
-          <input type="text" name="nome" placeholder="Digitar o nome">
-          <label>Descrição</label>
-          <input type="text" name="descricao" placeholder="Digitar a descrição">
 
-          <label>Categoria</label>
-          <!-- A ser feito quanto descobrir como realizar igual o figma -->
-          <select name="categoria" id="select__cadastroProduto">
-            <option disabled selected hidden value="">Escolher categoria</option>
-            <option value="Panificadora">Panificadora</option>
-            <option value="Frutas">Frutas</option>
-            <option value="Bebidas">Bebidas</option>
-          </select>
-
-          <label>Valor do Produto</label>
-          <input type="number" name="preco" placeholder="Digitar o valor aqui">
-          <label>Link da imagem</label>
-          <input type="url" name="imagem" placeholder="Inserir link">
-
-          <div class="modal__formBotoesEditar">
-            <button class="modal__formBotaoExcluir" type="reset">Excluir</button>
-            <button class="modal__formBotaoSalvar" type="submit">Salvar alteraçôes</button>
-          </div>
-        </form>
-    </nav>
-  </section>
+  
 
   <section class="sectionModal sectionModal__excluirProduto">
     <nav class="modal__excluirProduto modal__admin">

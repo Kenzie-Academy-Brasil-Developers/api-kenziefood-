@@ -100,7 +100,7 @@ export class Api {
 
   static async atualizarProduto(data, idProduto) {
     const resposta = await fetch(
-      `https://kenzie-food-api.herokuapp.com/my/products${idProduto}`,
+      `https://kenzie-food-api.herokuapp.com/my/products/${idProduto}`,
       {
         method: "PATCH", 
         headers: {

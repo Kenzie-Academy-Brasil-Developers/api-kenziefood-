@@ -27,12 +27,12 @@ export class VitrineAdm {
 
             <div class="vitrine__produtosTemplateDivBotoes">
 
-            <button id="${produtos.id}"class="vitrine__produtosTemplateBotaoPath">
-            <img class="vitrine__produtosImgPath" src="../svgs/pen-to-square-solid.svg"> 
+            <button id="${produtos.id}" class="vitrine__produtosTemplateBotaoPath">
+            <img id="${produtos.id}" class="vitrine__produtosImgPath" src="../svgs/pen-to-square-solid.svg"> 
             </button>
 
-            <button id="${produtos.id}"class="vitrine__produtosTemplateBotaoDelete">
-             <img class="vitrine__produtosImgDelete" src="../svgs/trash-solid.svg">
+            <button id="${produtos.id}" class="vitrine__produtosTemplateBotaoDelete">
+             <img id="${produtos.id}" class="vitrine__produtosImgDelete" src="../svgs/trash-solid.svg">
             </button>
 
             </div>

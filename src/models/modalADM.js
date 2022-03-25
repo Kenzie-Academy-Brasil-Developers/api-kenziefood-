@@ -1,7 +1,11 @@
 import { Api } from "./Api.js"
 import { PegarFormulario } from "./PegarFormulario.js"
 
+
 export class ModalADM{
+
+    static  idProdutoEdicao = ""
+
     static async filtrosADM(categoria){
         const arrayFiltro = []
         const arrayProdutos = await Api.pegarProdutosPublico()
@@ -60,6 +64,8 @@ export class ModalADM{
         if(botaoEditar.className === "vitrine__produtosImgPath"){
             const modalEditarProduto = document.querySelector(".sectionModal__alterarProduto");
             modalEditarProduto.style.display = "flex"
+            this.idProdutoEdicao = event.target.id
+            
         }
     }
 
@@ -79,5 +85,11 @@ export class ModalADM{
     static excluirProdutoAbrirFechar(){
         const modalExcluirProduto = document.querySelector(".sectionModal__excluirProduto");
         modalExcluirProduto.style.display = "none"
+    }
+
+    static pegarIdEdicao(event) {
+        
+    
+        
     }
 }

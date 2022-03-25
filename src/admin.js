@@ -24,6 +24,7 @@ botaoFecharCadastro.addEventListener('click',ModalADM.fecharAdicionarProdutoModa
 
 const form = document.querySelector('form')
 form.addEventListener('submit', PegarFormulario.gerarData)
+
 //vitrine editar produto
 VitrineAdm.vitrineProdutos();
 const botaoEditar = document.querySelector(".vitrine__produtosTemplate");
@@ -39,3 +40,12 @@ botaoExcluirProduto.addEventListener("click", ModalADM.excluirProdutoAbrir);
 const botaoExcluirProdutoFechar = document.querySelector(".modal__excluirProdutoBotao");
 botaoExcluirProdutoFechar.addEventListener("click", ModalADM.excluirProdutoAbrirFechar);
 
+//form editar
+
+const botaoEditarProdutoApi = document.querySelector(".modal__formBotaoSalvar");
+botaoEditarProdutoApi.addEventListener("submit", PegarFormulario.gerarData);
+
+//botao editar
+
+const botaoEditarProdutosApi = document.querySelector(".modal__formBotaoSalvar");
+botaoEditarProdutoApi.addEventListener("submit", PegarFormulario.gerarData)
