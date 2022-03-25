@@ -1,7 +1,6 @@
-
-
 export class Api {
   static async criarUsuario(data) {
+    
     const resposta = await fetch(
       "https://kenzie-food-api.herokuapp.com/auth/register",
       {
@@ -12,7 +11,10 @@ export class Api {
         body: JSON.stringify(data), 
       })
       .then((res) => res.json())
-      .then((res) => res)
+      .then((res) => {
+        const modalCadastro = document.querySelector('.modal__cadastro')
+        modalCadastro.style.display = "none"
+      })
       .catch((error) => error);
 
     return resposta;
@@ -30,10 +32,16 @@ export class Api {
       })
       .then((res) => res.json())
       .then((resposta) => {
-        const token = resposta
+        if (typeof resposta === 'string') {
+          const token = resposta
+          console.log(token)
 
-        window.localStorage.clear()
-        window.localStorage.setItem('token', token)
+          window.localStorage.removeItem('token')
+          window.localStorage.setItem('token', token)
+
+          window.location.href = '/src/pages/admin.html'
+        }
+
       })
       .catch((error) => error);
   
@@ -47,7 +55,7 @@ export class Api {
       .then(res => res.json())
       .then(res => res)
 
-    return resposta
+      return resposta
   }
 
   static async pegarMeusProdutos () {
@@ -68,7 +76,7 @@ export class Api {
 
   static async criarProduto(data) {
     const resposta = await fetch(
-      "https://api-blog-m2.herokuapp.com/my/products",
+      "https://kenzie-food-api.herokuapp.com/my/products",
       {
         method: "POST", 
         headers: {
@@ -78,8 +86,15 @@ export class Api {
         body: JSON.stringify(data), 
       })
       .then((res) => res.json())
-      .then((res) => res)
-      .catch((error) => error);
+      .then((res) => {
+        const statusConfirmado = document.querySelector('.section__statusConfirmado')
+        statusConfirmado.style.display = 'flex'
+      })
+      .catch((error) => {
+        const statusNegado = document.querySelector('.section__statusRecusado')
+        statusNegado.style.display = 'flex'
+        return error
+      });
     return resposta;
   }
 
@@ -102,18 +117,17 @@ export class Api {
 
   static async deletarMeuProduto(idProduto) {
     const resposta = await fetch(
-      `https://kenzie-food-api.herokuapp.com/my/products/:${idPost}`,
+      `https://kenzie-food-api.herokuapp.com/my/products/${idProduto}`,
       {
         method: "DELETE", 
         headers: {
           "Content-Type": "application/json", 
           "Authorization": `Bearer ${Api.token}` 
         },
-        body: JSON.stringify(data), 
-      })
+      })/*
       .then((res) => res.json())
       .then((res) => res)
-      .catch((error) => error);
+      .catch((error) => error);*/
     return resposta;
   }
 
