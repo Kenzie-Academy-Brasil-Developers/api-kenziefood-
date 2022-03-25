@@ -3,9 +3,7 @@ import { PegarFormulario } from "./PegarFormulario.js"
 import { VitrineAdm } from "./vitrineAdm.js"
 
 const arrayProdutosNosso = await Api.pegarMeusProdutos()
-const arrayProdutosPublico = await Api.pegarProdutosPublico()
 
-const arrayProdutosADM = arrayProdutosNosso.concat(arrayProdutosPublico)
 const vitrine = document.querySelector(".vitrine__produtosTemplate");
 
 let idProduto = ''
@@ -13,7 +11,7 @@ export class ModalADM{
     static async filtrosADM(categoria){
         const arrayFiltro = []
         
-        arrayProdutosADM.forEach(produto =>{
+        arrayProdutosNosso.forEach(produto =>{
             if(produto.categoria == categoria){
                 arrayFiltro.push(produto)
                 VitrineAdm.vitrineProdutos(arrayFiltro, vitrine)
@@ -26,7 +24,7 @@ export class ModalADM{
     }
 
     static async filtroTodosADM(){
-        VitrineAdm.vitrineProdutos(arrayProdutosADM, vitrine)
+        VitrineAdm.vitrineProdutos(arrayProdutosNosso, vitrine)
     }
 
     static filtroPanificadoraADM(event){
