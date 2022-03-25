@@ -721,12 +721,12 @@ background-color: #FFFFFF;
     font-size: 14px;
     }
 
-    .section__carrinhoModalDiv{
+    .section__carrinhoModalDiv {
         width: 27vw;
         position: fixed;
         top: 13%;
-        right: 2%;
-        height: 65vh;
+        right: 13%;
+        height: 66vh;
         background-color: transparent;
     }
 
@@ -817,10 +817,23 @@ background-color: #FFFFFF;
         left: 1019px;
 
     }
+    .section__carrinhoModalDiv {
+        width: 27vw;
+        position: fixed;
+        top: 13%;
+        right: 9%;
+        height: 66vh;
+        background-color: transparent;
+    }
 }
 
 @media (min-width: 1600px){
-
+    .section__carrinhoAbrir{
+        left: 68%;
+    }
+    .section__carrinhoModalDiv{
+        left: 68%;
+    }
     .pesquisa__produtos{
         left: 1160px;
     }
@@ -837,6 +850,10 @@ background-color: #FFFFFF;
 
     .pesquisa__produtos{
         left: 2135px;
+    }
+
+    .section__carrinhoAbrir{
+        left: 68%;
     }
 }
 
